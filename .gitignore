@@ -1,0 +1,42 @@
+cat > .gitignore <<'EOF'
+# Unity generated files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+MemoryCaptures/
+Recordings/
+
+# IDE
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.slnx
+*.user
+*.pidb
+*.booproj
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Model weights and large binaries
+*.onnx
+*.pt
+*.pth
+*.engine
+
+# Temporary testing projects
+tools/unity_infer_test/
+tools/unity_capture_copy/
+EOF
