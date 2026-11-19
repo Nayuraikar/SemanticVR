@@ -1,0 +1,56 @@
+[TEST] PASS a null profile yields an error, not a crash
+[TEST] PASS agreement -> AI source, no disagreement
+[TEST] PASS AI only -> AI
+[TEST] PASS COCO names person/bicycle/car/motorcycle/bus/truck/traffic light/stop sign
+[TEST] PASS COCO table has 80 valid classes
+[TEST] PASS COCO unused ids invalid (0,12,26,29,30,45,66,68,69,71,83)
+[TEST] PASS conflict, high AI confidence -> AI, disagreement exposed
+[TEST] PASS conflict, low AI confidence -> manual
+[TEST] PASS copy profile
+[TEST] PASS default map validates against class table
+[TEST] PASS default Road Safety weights per spec
+[TEST] PASS detection ids unique & ascending
+[TEST] PASS determinant
+[TEST] PASS Deuteranomaly 100% equals deuteranopia matrix
+[TEST] PASS deuteranopia keeps white ~white (rows sum ~1)
+[TEST] PASS EffectiveSeverity01 for Tritanopia is 1
+[TEST] PASS golden reference loads
+[TEST] PASS identity valid
+[TEST] PASS instance-ID map non-empty
+[TEST] PASS known mapping point q=3,y=5,x=7 -> (7*100+3)*78+5
+[TEST] PASS manual only -> manual tag (fallback)
+[TEST] PASS map: person->Pedestrian, light->TrafficLight, stop sign->TrafficSign, bus->Vehicle
+[TEST] PASS matrix * identity
+[TEST] PASS NaN rejected
+[TEST] PASS neither -> None
+[TEST] PASS Normal -> identity simulation and correction
+[TEST] PASS oversized entry rejected
+[TEST] PASS parser finds 19 detections at 0.3 (matches ONNX Runtime script)
+[TEST] PASS pool reuse: re-parse gives same count
+[TEST] PASS PreferAI wins regardless of confidence
+[TEST] PASS PreferManual wins regardless of confidence
+[TEST] PASS profile switch changes weights
+[TEST] PASS Protanopia ignores the severity slider (always 100%)
+[TEST] PASS provider output outside limits is rejected, not applied (identity + error)
+[TEST] PASS reset allows immediate start
+[TEST] PASS reset restores defaults
+[TEST] PASS runtime copy edits do not touch the original
+[TEST] PASS scheduler never starts while busy
+[TEST] PASS scheduler starts immediately
+[TEST] PASS scheduler waits for interval
+[TEST] PASS severity 0 -> identity simulation
+[TEST] PASS singular rejected when invertibility required, allowed otherwise
+[TEST] PASS strength 0 -> identity correction
+[TEST] PASS threshold 0.99 yields no detections
+[TEST] PASS ThrowIfFailed throws on failed validation
+[TEST] PASS top bus mask has many cells inside its box (python: ~450 px at 78x78 scale)
+[TEST] PASS top confidence ~0.933
+[TEST] PASS top detection box matches ONNX Runtime ([0.0006,0.530]-[0.224,0.911] normalised)
+[TEST] PASS top-6 class order bus,bus,car,person,person,bus
+[TEST] PASS transposed layout index is a bijection
+[TEST] PASS unsupported COCO classes are not mapped (handbag 31, vase 86, bench 15)
+[TEST] PASS validator accepts correctly laid-out golden data
+[TEST] PASS validator rejects masks in the wrong layout and says so
+[TEST] PASS weights clamp to 0
+[TEST] PASS weights clamp to 5
+[TEST] SUMMARY passed=55 failed=0

@@ -1,0 +1,6 @@
+{
+"device_requested": "CPU", "target_fps": 60,
+"modes": [
+{"mode": "GameCamera", "status": "Failed", "message": "CPU backend did not finish the start-up validation within 20 s (known issue: the CPU backend can stall in Editor play mode). Try GPUCompute.", "backend": "Unity Inference Engine / CPU", "validation": ""}
+]
+}

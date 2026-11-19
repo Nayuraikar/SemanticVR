@@ -1,5 +1,4 @@
-cat > .gitignore <<'EOF'
-# Unity generated files
+# ===== Unity generated =====
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -7,10 +6,23 @@ cat > .gitignore <<'EOF'
 [Bb]uilds/
 [Ll]ogs/
 [Uu]ser[Ss]ettings/
-MemoryCaptures/
-Recordings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+ExportedObj/
+.gradle/
+sysinfo.txt
+crashlytics-build.properties
 
-# IDE
+# Unity build outputs
+*.apk
+*.aab
+*.unitypackage
+*.pdb.meta
+*.mdb.meta
+*.pidb.meta
+
+# ===== IDE =====
+.vs/
 .vscode/
 .idea/
 *.csproj
@@ -20,23 +32,38 @@ Recordings/
 *.pidb
 *.booproj
 
-# OS
+# ===== OS =====
 .DS_Store
 Thumbs.db
 
-# Python
+# ===== Python =====
 __pycache__/
-*.pyc
+*.py[cod]
 venv/
 .venv/
+.pytest_cache/
+*.egg-info/
 
-# Model weights and large binaries
+# ===== Model weights and large binaries (never commit; see README section 7) =====
+# Note: these patterns do NOT match "*.onnx.meta", so Unity's
+# SemanticVR_Unity/Assets/Models/rfdetr_seg_nano.onnx.meta stays tracked.
 *.onnx
 *.pt
 *.pth
+*.safetensors
 *.engine
 
-# Temporary testing projects
+# ===== Logs and local test output =====
+*.log
+test_out/
+
+# ===== Local scratch projects, generated outputs and backups under tools/ =====
+tools/unity_dev/
 tools/unity_infer_test/
 tools/unity_capture_copy/
-EOF
+tools/out/
+tools/backup_pre_phase4/
+tools/*.log
+# Unity-produced dumps, regenerated (and deleted) by tools/scripts/try_version.sh.
+# The ONNX Runtime references tools/ref/{input,dets,labels,masks}.bin stay tracked.
+tools/ref/unity_*
