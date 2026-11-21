@@ -1,6 +1,6 @@
 # SemanticVR: instructions for Claude Code
 
-Unity (2022.3 LTS, URP, Linear) UPM plugin + Python offline reference. Develop on LAPTOP first
+Unity 6.3 LTS (6000.3), URP, Linear; project at unity/SemanticVR UPM plugin + Python offline reference. Develop on LAPTOP first
 (simulated side-by-side stereo in Game view); Android/Cardboard comes later. Never break desktop path.
 
 ## Rules

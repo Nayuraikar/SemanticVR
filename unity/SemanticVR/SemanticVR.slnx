@@ -1,6 +1,0 @@
-﻿<Solution>
-  <Project Path="Assembly-CSharp-Editor.csproj" />
-  <Project Path="Assembly-CSharp.csproj" />
-  <Project Path="SemanticVR.Editor.csproj" />
-  <Project Path="SemanticVR.Runtime.csproj" />
-</Solution>

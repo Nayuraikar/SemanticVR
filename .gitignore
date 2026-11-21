@@ -25,3 +25,4 @@ results/**/*.pt
 .DS_Store
 Thumbs.db
 .vscode/
+unity/**/*.slnx

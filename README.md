@@ -3,7 +3,7 @@
 Illumination-aware, stereo-consistent semantic recolouring for colour-vision-deficient users in dynamic VR under frame budgets.</p>
 
 <p align="center">
-  <img alt="Unity" src="https://img.shields.io/badge/Unity-2022.3%20LTS-black?logo=unity">
+  <img alt="Unity" src="https://img.shields.io/badge/Unity-6.3%20LTS-black?logo=unity">
   <img alt="URP" src="https://img.shields.io/badge/pipeline-URP-blue">
   <img alt="Status" src="https://img.shields.io/badge/status-Phase%200-orange">
 </p>
