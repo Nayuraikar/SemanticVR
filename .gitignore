@@ -1,0 +1,27 @@
+# Unity
+unity/**/[Ll]ibrary/
+unity/**/[Tt]emp/
+unity/**/[Oo]bj/
+unity/**/[Bb]uild/
+unity/**/[Bb]uilds/
+unity/**/[Ll]ogs/
+unity/**/[Uu]ser[Ss]ettings/
+unity/**/.vs/
+unity/**/.idea/
+unity/**/*.csproj
+unity/**/*.sln
+unity/**/*.apk
+unity/**/*.aab
+# Python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+*.egg-info/
+# Results (keep summaries, ignore bulk)
+results/**/*.npz
+results/**/*.pt
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/

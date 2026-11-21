@@ -1,0 +1,10 @@
+numpy
+scipy
+pandas
+matplotlib
+colour-science
+daltonlens
+torch
+numba
+mpi4py
+pytest

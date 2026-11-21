@@ -1,0 +1,15 @@
+{
+  "name": "com.nayuraikar.semanticvr",
+  "displayName": "SemanticVR: Confusion-Aware Rendering",
+  "version": "0.1.0",
+  "unity": "2022.3",
+  "description": "Lighting-aware, stereo-consistent semantic recolouring for colour-vision-deficient users in VR.",
+  "keywords": ["vr", "accessibility", "colour-vision-deficiency", "urp"],
+  "author": { "name": "Nayuraikar" },
+  "dependencies": {
+    "com.unity.burst": "1.8.0",
+    "com.unity.mathematics": "1.2.6",
+    "com.unity.collections": "2.1.4",
+    "com.unity.render-pipelines.universal": "14.0.0"
+  }
+}

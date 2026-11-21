@@ -1,0 +1,13 @@
+{
+  "name": "SemanticVR.Runtime",
+  "rootNamespace": "SemanticVR",
+  "references": [
+    "Unity.Burst",
+    "Unity.Mathematics",
+    "Unity.Collections",
+    "Unity.RenderPipelines.Core.Runtime",
+    "Unity.RenderPipelines.Universal.Runtime"
+  ],
+  "allowUnsafeCode": true,
+  "autoReferenced": true
+}
