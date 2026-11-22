@@ -8,6 +8,7 @@ namespace SemanticVR.Core
     public class HudOverlay : MonoBehaviour
     {
         public DebugViewController controller;
+        [Tooltip("Optional: pair-graph gizmos (G toggles). Found automatically.")] public SemanticGraphGizmos graph;
         public bool visible = true;
         [Tooltip("Press H to hide/show.")] public bool allowToggle = true;
 
@@ -25,6 +26,7 @@ namespace SemanticVR.Core
         {
             if (controller == null) controller = GetComponent<DebugViewController>();
             if (controller == null) controller = FindFirstObjectByType<DebugViewController>();
+            if (graph == null) graph = FindFirstObjectByType<SemanticGraphGizmos>();
         }
 
         void Update()
@@ -78,8 +80,8 @@ namespace SemanticVR.Core
             float scale = Mathf.Clamp(Screen.height / 900f, 1f, 2.5f);
             if (_styleHeight != Screen.height || _title == null) BuildStyles(scale);
 
-            float pad = 14 * scale, row = 22 * scale, w = 300 * scale;
-            float h = pad * 2 + row * 7 + 6 * scale;
+            float pad = 14 * scale, row = 22 * scale, w = 350 * scale;
+            float h = pad * 2 + row * (graph != null ? 8 : 7) + 6 * scale;
             var r = new Rect(16 * scale, 16 * scale, w, h);
 
             GUI.color = Bg;
@@ -97,8 +99,10 @@ namespace SemanticVR.Core
             GUI.color = Accent; GUI.DrawTexture(new Rect(bar.x, bar.y, bar.width * controller.Severity, bar.height), _white);
             GUI.color = Color.white; y += 10 * scale;
             Row(ref y, x, iw, row, "Display", controller.Stereo ? "Stereo (SBS)" : "Mono");
+            if (graph != null)
+                Row(ref y, x, iw, row, "Pair graph (G)", graph.showEdges ? $"On · {graph.ConfusableCount} confusable" : "Off");
             Row(ref y, x, iw, row, "Frame", $"{_smoothedDt * 1000f:0.0} ms   {1f / _smoothedDt:0} fps");
-            GUI.Label(new Rect(x, y, iw, row), "1/2/3 view · P/D/T type · [ ] severity · Tab stereo", _hint);
+            GUI.Label(new Rect(x, y, iw, row), "1/2/3 view · P/D/T type · [ ] severity · Tab stereo · G graph", _hint);
         }
 
         void Row(ref float y, float x, float w, float h, string label, string value)

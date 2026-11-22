@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Phase0_Demo.unity
     guid: 2c3eedd98d723441ba43abee3b3ef928
+  - enabled: 1
+    path: Assets/Samples/SemanticVR/01_Street/01_Street.unity
+    guid: bed7f965cc6474e6dade70e8a773bd64
+  - enabled: 1
+    path: Assets/Samples/SemanticVR/02_Signals/02_Signals.unity
+    guid: d99ab666c9c2c4dcaab2c9d0650736c0
+  - enabled: 1
+    path: Assets/Samples/SemanticVR/03_Forest/03_Forest.unity
+    guid: 4cad6a56e883e43fbb05461b0629fddd
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

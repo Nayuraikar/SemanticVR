@@ -259,7 +259,9 @@ namespace SemanticVR.Editor
 
         static void SetBuildSettings()
         {
-            EditorBuildSettings.scenes = new[] { new EditorBuildSettingsScene(ScenePath, true) };
+            var list = new List<EditorBuildSettingsScene>(EditorBuildSettings.scenes);
+            if (!list.Exists(sc => sc.path == ScenePath)) list.Insert(0, new EditorBuildSettingsScene(ScenePath, true)); // keep scenes added by other builders
+            EditorBuildSettings.scenes = list.ToArray();
         }
     }
 }

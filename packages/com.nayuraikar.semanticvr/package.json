@@ -19,5 +19,22 @@
     "com.unity.collections": "2.1.4",
     "com.unity.render-pipelines.universal": "17.0.3",
     "com.unity.inputsystem": "1.8.0"
-  }
+  },
+  "samples": [
+    {
+      "displayName": "01 Street",
+      "description": "Signalised street crossing: traffic signals (FSM), road signs, cars, grass, sky, hazard flashers.",
+      "path": "Samples~/01_Street"
+    },
+    {
+      "displayName": "02 Signals",
+      "description": "Railway station: rail signals, level-crossing flashers and a departure/status board, all FSM-driven.",
+      "path": "Samples~/02_Signals"
+    },
+    {
+      "displayName": "03 Forest",
+      "description": "Red berries on green bushes and ripe/unripe fruit: the classic red-green foraging confusion.",
+      "path": "Samples~/03_Forest"
+    }
+  ]
 }
