@@ -81,7 +81,9 @@ namespace SemanticVR.Core
             if (_styleHeight != Screen.height || _title == null) BuildStyles(scale);
 
             float pad = 14 * scale, row = 22 * scale, w = 350 * scale;
-            float h = pad * 2 + row * (graph != null ? 8 : 7) + 6 * scale;
+            float hintRow = 17 * scale;
+            bool origHint = graph != null && controller.Mode == DebugViewMode.Original;
+            float h = pad * 2 + row * (graph != null ? 7 : 6) + hintRow * (origHint ? 3 : 2) + 6 * scale;
             var r = new Rect(16 * scale, 16 * scale, w, h);
 
             GUI.color = Bg;
@@ -89,7 +91,7 @@ namespace SemanticVR.Core
             GUI.color = Color.white;
 
             float x = r.x + pad, y = r.y + pad, iw = w - pad * 2;
-            GUI.Label(new Rect(x, y, iw, row), "SemanticVR  ·  Phase 0", _title); y += row + 4 * scale;
+            GUI.Label(new Rect(x, y, iw, row), "SemanticVR", _title); y += row + 4 * scale;
             Row(ref y, x, iw, row, "View", controller.Mode.ToString());
             Row(ref y, x, iw, row, "CVD type", controller.Type.ToString());
             Row(ref y, x, iw, row, "Severity", controller.Severity.ToString("0.00"));
@@ -100,9 +102,12 @@ namespace SemanticVR.Core
             GUI.color = Color.white; y += 10 * scale;
             Row(ref y, x, iw, row, "Display", controller.Stereo ? "Stereo (SBS)" : "Mono");
             if (graph != null)
-                Row(ref y, x, iw, row, "Pair graph (G)", graph.showEdges ? $"On · {graph.ConfusableCount} confusable" : "Off");
+                Row(ref y, x, iw, row, "Pair graph (G)", graph.showEdges ? $"On · showing {graph.ShownCount} of {graph.TotalCount}" : "Off");
             Row(ref y, x, iw, row, "Frame", $"{_smoothedDt * 1000f:0.0} ms   {1f / _smoothedDt:0} fps");
-            GUI.Label(new Rect(x, y, iw, row), "1/2/3 view · P/D/T type · [ ] severity · Tab stereo · G graph", _hint);
+            // Two short lines: the single 70-char line overflowed the 350px panel and was clipped.
+            GUI.Label(new Rect(x, y, iw, hintRow), "1/2/3 view · P/D/T type · [ ] severity", _hint); y += hintRow;
+            GUI.Label(new Rect(x, y, iw, hintRow), "Tab stereo · G graph · +/- count · L labels · H HUD", _hint); y += hintRow;
+            if (origHint) GUI.Label(new Rect(x, y, iw, hintRow), "Press 2 or 3 to see the simulation", _hint);
         }
 
         void Row(ref float y, float x, float w, float h, string label, string value)

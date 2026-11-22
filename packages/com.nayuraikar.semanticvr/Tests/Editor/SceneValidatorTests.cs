@@ -94,7 +94,7 @@ namespace SemanticVR.Tests
             Assert.IsEmpty(issues.Where(i => i.severity != IssueSeverity.Info).Select(i => i.ToString()).ToArray());
         }
 
-        static readonly string[] Samples = { "01_Street", "02_Signals", "03_Forest" };
+        static readonly string[] Samples = { "01_Street", "02_Signals", "03_Cockpit", "04_Medical" };
 
         [Test]
         public void SampleScenes_AreValid([ValueSource(nameof(Samples))] string name)

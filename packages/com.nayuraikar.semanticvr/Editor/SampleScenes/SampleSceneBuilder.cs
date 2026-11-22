@@ -5,7 +5,7 @@ using UnityEngine;
 namespace SemanticVR.Editor
 {
     /// <summary>
-    /// Builds the three Phase 1 sample scenes into the host project (Assets/Samples/SemanticVR/&lt;scene&gt;/) and then
+    /// Builds the four sample scenes (Street, Signals, Cockpit, Medical) into the host project (Assets/Samples/SemanticVR/&lt;scene&gt;/) and then
     /// snapshots each folder (including .meta files, so GUID references stay valid) into the package's Samples~/ folder.
     /// Headless: <c>Unity -batchmode -projectPath unity/SemanticVR -executeMethod SemanticVR.Editor.SampleSceneBuilder.BuildAll -quit</c>
     /// (only works while no other Editor instance has the project open).
@@ -13,19 +13,24 @@ namespace SemanticVR.Editor
     public static class SampleSceneBuilder
     {
         const string PackageName = "com.nayuraikar.semanticvr";
-        public static readonly string[] SampleNames = { "01_Street", "02_Signals", "03_Forest" };
+        public static readonly string[] SampleNames = { "01_Street", "02_Signals", "03_Cockpit", "04_Medical" };
 
         [MenuItem("SemanticVR/Build Sample Scenes")]
         public static void BuildAll()
         {
             Scene01Street.Build();
             Scene02Signals.Build();
-            Scene03Forest.Build();
+            Scene03Cockpit.Build();
+            Scene04Medical.Build();
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             SyncToPackage();
             Debug.Log("[SemanticVR] Sample scenes built and synced to Samples~.");
         }
+
+        /// <summary>The Forest scene is no longer a listed sample (replaced by 03_Cockpit); its builder is kept for reference.</summary>
+        [MenuItem("SemanticVR/Build Legacy Forest Scene")]
+        public static void BuildLegacyForest() { Scene03Forest.Build(); AssetDatabase.SaveAssets(); Debug.Log("[SemanticVR] Built legacy 03_Forest (not synced to Samples~)."); }
 
         /// <summary>Copy Assets/Samples/SemanticVR/&lt;name&gt; to &lt;package&gt;/Samples~/&lt;name&gt; (replacing it).</summary>
         public static void SyncToPackage()

@@ -32,9 +32,14 @@
       "path": "Samples~/02_Signals"
     },
     {
-      "displayName": "03 Forest",
-      "description": "Red berries on green bushes and ripe/unripe fruit: the classic red-green foraging confusion.",
-      "path": "Samples~/03_Forest"
+      "displayName": "03 Cockpit",
+      "description": "Airliner flight deck: master warning/caution, annunciator panel, PFD/ND colour coding and a runway with PAPI and edge lights.",
+      "path": "Samples~/03_Cockpit"
+    },
+    {
+      "displayName": "04 Medical",
+      "description": "ICU bay: patient monitor with alarm banners and traces, medical-gas cylinders, drug labels, infusion pump, skin and cyanosis tint.",
+      "path": "Samples~/04_Medical"
     }
   ]
 }

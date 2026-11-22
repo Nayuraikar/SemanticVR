@@ -122,6 +122,63 @@ namespace SemanticVR.Editor
             return Mats[name] = m;
         }
 
+        /// <summary>Unlit material (screens, ceiling panels): shows its colour/texture regardless of scene lighting.</summary>
+        public static Material UnlitMat(string name, Color color, Texture tex = null)
+        {
+            if (Mats.TryGetValue(name, out var cached) && cached != null) return cached;
+            string path = $"{Dir}/Materials/{name}.mat";
+            var m = AssetDatabase.LoadAssetAtPath<Material>(path);
+            if (m == null) { m = new Material(Shader.Find("Universal Render Pipeline/Unlit")); AssetDatabase.CreateAsset(m, path); }
+            m.SetColor("_BaseColor", color);
+            if (tex != null) m.SetTexture("_BaseMap", tex);
+            EditorUtility.SetDirty(m);
+            return Mats[name] = m;
+        }
+
+        /// <summary>Write <paramref name="t"/> to Textures/&lt;name&gt;.png and return the imported asset (clamped, bilinear, mipmapped).</summary>
+        public static Texture2D SaveTexture(string name, Texture2D t)
+        {
+            string path = $"{Dir}/Textures/{name}.png";
+            t.Apply();
+            File.WriteAllBytes(path, t.EncodeToPNG());
+            Object.DestroyImmediate(t);
+            AssetDatabase.ImportAsset(path);
+            var imp = (TextureImporter)AssetImporter.GetAtPath(path);
+            imp.wrapMode = TextureWrapMode.Clamp; imp.filterMode = FilterMode.Bilinear; imp.mipmapEnabled = true; imp.anisoLevel = 8;
+            imp.SaveAndReimport();
+            return AssetDatabase.LoadAssetAtPath<Texture2D>(path);
+        }
+
+        /// <summary>Save a procedural mesh as an asset (scenes cannot keep unsaved meshes).</summary>
+        public static Mesh SaveMesh(string name, Mesh m)
+        {
+            EnsureFolder(Dir + "/Meshes");
+            string path = $"{Dir}/Meshes/{name}.asset";
+            var old = AssetDatabase.LoadAssetAtPath<Mesh>(path);
+            if (old != null) AssetDatabase.DeleteAsset(path);
+            AssetDatabase.CreateAsset(m, path);
+            return m;
+        }
+
+        /// <summary>A flat ribbon along <paramref name="pts"/> (XY, metres, facing -Z) with the given thickness: waveform traces, route lines.</summary>
+        public static Mesh Ribbon(string name, IList<Vector2> pts, float thickness)
+        {
+            var verts = new List<Vector3>(); var tris = new List<int>();
+            for (int i = 0; i < pts.Count; i++)
+            {
+                Vector2 d = (i < pts.Count - 1 ? pts[i + 1] - pts[i] : pts[i] - pts[i - 1]).normalized;
+                if (i > 0 && i < pts.Count - 1) d = ((pts[i + 1] - pts[i]).normalized + (pts[i] - pts[i - 1]).normalized).normalized;
+                var n = new Vector2(-d.y, d.x) * (thickness * 0.5f);
+                verts.Add(pts[i] + n); verts.Add(pts[i] - n);
+                if (i > 0) { int k = i * 2; tris.AddRange(new[] { k - 2, k - 1, k, k - 1, k + 1, k, k - 2, k, k - 1, k - 1, k, k + 1 }); }
+            }
+            var m = new Mesh { name = name };
+            m.SetVertices(verts); m.SetTriangles(tris, 0);
+            var nrm = new List<Vector3>(); foreach (var _ in verts) nrm.Add(Vector3.back);
+            m.SetNormals(nrm); m.RecalculateBounds();
+            return SaveMesh(name, m);
+        }
+
         public static GameObject Group(string name, Transform parent, Vector3? pos = null, Vector3? euler = null)
         {
             var go = new GameObject(name);
@@ -231,6 +288,14 @@ namespace SemanticVR.Editor
             var r = go.GetComponent<Renderer>();
             r.shadowCastingMode = ShadowCastingMode.Off; r.receiveShadows = false;
             return Tag(go, DefaultClassLibrary.Sky, "Day", includeInGraph: false);
+        }
+
+        /// <summary>Tagged thin panel (a cube): the building block for display elements, annunciators and labels.</summary>
+        public static SemanticTag Panel(string name, Transform parent, Vector3 pos, Vector2 size, int classId, string state, float depth = 0.01f)
+        {
+            var cls = Class(classId);
+            var go = Prim(PrimitiveType.Cube, name, parent, pos, new Vector3(size.x, size.y, depth), StateMat(cls, state, 0.35f));
+            return Tag(go, classId, state);
         }
 
         /// <summary>Phase0 rig + debug view + HUD, plus the pair-graph gizmos (G).</summary>

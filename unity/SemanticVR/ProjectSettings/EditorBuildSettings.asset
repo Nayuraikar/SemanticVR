@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Samples/SemanticVR/03_Forest/03_Forest.unity
     guid: 4cad6a56e883e43fbb05461b0629fddd
+  - enabled: 1
+    path: Assets/Samples/SemanticVR/03_Cockpit/03_Cockpit.unity
+    guid: 1bfcc591e28a94eaaa6a9723985ef839
+  - enabled: 1
+    path: Assets/Samples/SemanticVR/04_Medical/04_Medical.unity
+    guid: 68c5def9de6c74bbc93d55a5ba62c04a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

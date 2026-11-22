@@ -129,5 +129,84 @@ namespace SemanticVR.Tests
             }
             finally { CvdDebugState.Type = prevT; CvdDebugState.Severity = prevS; }
         }
+
+        // ---- runtime line overlay ----
+        SemanticGraphGizmos MakeOverlay(int tagCount, int cap)
+        {
+            var cls = fx.Signal();
+            string[] states = { "Red", "Green", "Amber" };
+            for (int i = 0; i < tagCount; i++) fx.MakeTag(cls, states[i % 3], Far + Vector3.right * (0.4f * i));
+            var go = new GameObject("overlay"); fx.Created.Add(go);
+            var gz = go.AddComponent<SemanticGraphGizmos>();
+            gz.maxEdgeDistance = 100f; gz.showAllEdges = true; gz.maxEdges = cap;
+            return gz;
+        }
+        static int Active(SemanticGraphGizmos gz) => gz.Lines.Count(l => l != null && l.enabled);
+
+        [Test]
+        public void Overlay_CreatesLineRenderers_AfterGraphOn()
+        {
+            var gz = MakeOverlay(6, 25);
+            gz.showEdges = true; gz.Refresh();
+            Assert.Greater(gz.TotalCount, 0);
+            Assert.AreEqual(gz.ShownCount, Active(gz));
+            Assert.Greater(Active(gz), 0, "edges exist as renderers");
+            Assert.IsNotNull(gz.Lines[0].sharedMaterial);
+            gz.showEdges = false; gz.Refresh();
+            Assert.AreEqual(0, Active(gz), "G off hides every line");
+        }
+
+        [Test]
+        public void Overlay_RespectsCap_AndKeepsLowestDeltaE()
+        {
+            var gz = MakeOverlay(9, 5);   // 36 edges in range
+            gz.Refresh();
+            Assert.AreEqual(gz.Edges.Count, gz.TotalCount, "all edges eligible (showAllEdges)");
+            Assert.GreaterOrEqual(gz.TotalCount, 36);
+            Assert.AreEqual(5, gz.ShownCount);
+            Assert.AreEqual(5, Active(gz));
+            var sorted = gz.Edges.Select(e => e.DeltaESimulated).OrderBy(d => d).ToList();
+            Assert.LessOrEqual(sorted[4], sorted[5] + 1e-4f);
+            gz.AdjustMaxEdges(+5); gz.Refresh();
+            Assert.AreEqual(10, Active(gz));
+            gz.AdjustMaxEdges(-100); gz.Refresh();
+            Assert.AreEqual(1, gz.maxEdges, "cap clamps at 1");
+            Assert.AreEqual(1, Active(gz));
+        }
+
+        [Test]
+        public void Overlay_EdgeCountNeverExceedsN([Values(1, 3, 10, 25)] int cap)
+        {
+            var gz = MakeOverlay(10, cap);   // 45 edges
+            for (int i = 0; i < 3; i++) { gz.Refresh(); Assert.LessOrEqual(gz.ShownCount, cap); Assert.LessOrEqual(Active(gz), cap); }
+            Assert.AreEqual(cap, Active(gz), "enough edges exist to fill the cap");
+        }
+
+        [Test]
+        public void Overlay_FrustumCull_DropsEdgesOutsideCamera()
+        {
+            var gz = MakeOverlay(6, 25);
+            var camGo = new GameObject("cam"); fx.Created.Add(camGo);
+            var cam = camGo.AddComponent<Camera>();
+            cam.transform.position = Far + new Vector3(1f, 0f, -5f);
+            gz.cullCameras = new[] { cam };
+            cam.transform.rotation = Quaternion.LookRotation(Vector3.forward);
+            gz.Refresh();
+            Assert.Greater(gz.ShownCount, 0, "looking at the tags");
+            cam.transform.rotation = Quaternion.LookRotation(Vector3.back);
+            gz.Refresh();
+            Assert.AreEqual(0, gz.ShownCount, "looking away");
+            Assert.AreEqual(0, Active(gz));
+        }
+
+        [Test]
+        public void Overlay_LabelKey_CyclesOffDeltaENames()
+        {
+            var gz = MakeOverlay(3, 25);
+            Assert.AreEqual(GraphLabelDetail.Off, gz.labelDetail);
+            gz.CycleLabels(); Assert.AreEqual(GraphLabelDetail.DeltaE, gz.labelDetail);
+            gz.CycleLabels(); Assert.AreEqual(GraphLabelDetail.FullNames, gz.labelDetail);
+            gz.CycleLabels(); Assert.AreEqual(GraphLabelDetail.Off, gz.labelDetail);
+        }
     }
 }
