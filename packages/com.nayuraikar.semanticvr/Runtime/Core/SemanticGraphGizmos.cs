@@ -9,8 +9,8 @@ namespace SemanticVR.Core
     public enum GraphLabelDetail { Off = 0, DeltaE = 1, FullNames = 2 }
 
     /// <summary>
-    /// Pair-graph overlay: thin lines between confusable tagged objects, coloured by simulated ΔE00 (red = very low,
-    /// yellow = borderline). Only the <see cref="maxEdges"/> lowest-ΔE edges whose endpoints are both inside a camera
+    /// Pair-graph overlay: thin lines between confusable tagged objects, coloured by simulated ΔE00 on a luminance ramp
+    /// (white = very low, dark blue = borderline; stays distinguishable under deutan/protan), semi-transparent and faded with distance. Only the <see cref="maxEdges"/> lowest-ΔE edges whose endpoints are both inside a camera
     /// frustum are drawn. Rendered with pooled LineRenderers (unlit, world space) so it works in builds and in both
     /// stereo eyes; an optional Editor-Gizmos path uses the same selection.
     /// Keys: G toggle, + / - edge cap, L label detail (off, ΔE at midpoints, full names).
@@ -27,14 +27,19 @@ namespace SemanticVR.Core
         [Tooltip("Also draw in the Editor with Gizmos (needs the Gizmos button on). Same selection and limits.")] public bool editorGizmos = false;
         [Tooltip("Only edges with both endpoints inside one of these cameras' frusta. Empty = the StereoRig eyes, else Camera.main.")]
         public Camera[] cullCameras;
-        [Tooltip("Line width in metres.")] public float lineWidth = 0.012f;
+        [Tooltip("Line width in metres.")] public float lineWidth = 0.006f;
+        [Tooltip("Line opacity at close range.")] [Range(0f, 1f)] public float nearAlpha = 0.75f;
+        [Tooltip("Line opacity at fadeEndDistance and beyond.")] [Range(0f, 1f)] public float farAlpha = 0.15f;
+        [Tooltip("Distance (m, camera to edge midpoint) up to which lines keep nearAlpha.")] public float fadeStartDistance = 1.5f;
+        [Tooltip("Distance (m) at which lines reach farAlpha.")] public float fadeEndDistance = 8f;
         [Tooltip("Only pairs closer than this (metres) become edges.")] public float maxEdgeDistance = 8f;
         [Tooltip("Simulated ΔE00 at or below which a pair counts as confusable.")] public float confusableThreshold = 15f;
         [Tooltip("Original ΔE00 must be at least this for a pair to count (otherwise normal vision cannot tell it apart either).")]
         public float minOriginalDeltaE = 10f;
         [Tooltip("Seconds between graph rebuilds.")] public float refreshInterval = 0.25f;
 
-        static readonly Color VeryLow = new Color(1f, 0.15f, 0.12f), Borderline = new Color(1f, 0.88f, 0.15f);
+        // Luminance-led ramp (white -> dark blue): the blue/yellow axis survives deutan and protan, and lightness differs strongly.
+        static readonly Color VeryLow = new Color(1f, 1f, 1f), Borderline = new Color(0.08f, 0.16f, 0.62f);
 
         readonly List<PairEdge> _edges = new List<PairEdge>();
         readonly List<Candidate> _candidates = new List<Candidate>();
@@ -49,7 +54,7 @@ namespace SemanticVR.Core
         int _lastVersion = -1;
         CvdType _lastType; float _lastSeverity = -1f;
 
-        struct Candidate { public PairEdge Edge; public Vector3 P, Q; }
+        struct Candidate { public PairEdge Edge; public Vector3 P, Q; public float Alpha; }
         static readonly Comparison<Candidate> ByDeltaE = (a, b) => a.Edge.DeltaESimulated.CompareTo(b.Edge.DeltaESimulated);
 
         public IReadOnlyList<PairEdge> Edges => _edges;
@@ -131,12 +136,24 @@ namespace SemanticVR.Core
                 _candidatesTotal++;
                 Vector3 p = e.A.Bounds.ClosestPoint(e.B.Position), q = e.B.Bounds.ClosestPoint(p); // surface to surface, so lawns do not draw to their centre
                 if (!InFrustum(p) || !InFrustum(q)) continue;
-                _candidates.Add(new Candidate { Edge = e, P = p, Q = q });
+                _candidates.Add(new Candidate { Edge = e, P = p, Q = q, Alpha = DistanceAlpha((p + q) * 0.5f) });
             }
             _candidates.Sort(ByDeltaE);
             int n = Mathf.Min(Mathf.Max(maxEdges, 0), _candidates.Count);
             for (int i = 0; i < n; i++) _shown.Add(_candidates[i]);
         }
+
+        /// <summary>Opacity for an edge whose midpoint is at <paramref name="mid"/>: nearAlpha up close, easing to farAlpha, by distance to the nearest camera.</summary>
+        float DistanceAlpha(Vector3 mid)
+        {
+            if (_cams.Count == 0) return nearAlpha;
+            float d = float.MaxValue;
+            foreach (var c in _cams) d = Mathf.Min(d, Vector3.Distance(c.transform.position, mid));
+            return AlphaAtDistance(d);
+        }
+
+        public float AlphaAtDistance(float d) =>
+            Mathf.Lerp(nearAlpha, farAlpha, Mathf.Clamp01((d - fadeStartDistance) / Mathf.Max(fadeEndDistance - fadeStartDistance, 1e-3f)));
 
         public Color EdgeColour(float deltaE) =>
             Color.Lerp(VeryLow, Borderline, Mathf.Clamp01(deltaE / Mathf.Max(confusableThreshold, 1e-3f)));
@@ -181,7 +198,7 @@ namespace SemanticVR.Core
             {
                 var lr = GetLine(i);
                 var c = _shown[i];
-                var col = EdgeColour(c.Edge.DeltaESimulated);
+                var col = EdgeColour(c.Edge.DeltaESimulated); col.a = c.Alpha;
                 lr.startColor = lr.endColor = col;
                 lr.widthMultiplier = lineWidth;
                 lr.SetPosition(0, c.P); lr.SetPosition(1, c.Q);
@@ -238,7 +255,7 @@ namespace SemanticVR.Core
             if (!Application.isPlaying) { Rebuild(); SelectEdges(); }
             foreach (var c in _shown)
             {
-                Gizmos.color = EdgeColour(c.Edge.DeltaESimulated);
+                var gc = EdgeColour(c.Edge.DeltaESimulated); gc.a = c.Alpha; Gizmos.color = gc;
                 Gizmos.DrawLine(c.P, c.Q);
 #if UNITY_EDITOR
                 if (labelDetail != GraphLabelDetail.Off) UnityEditor.Handles.Label((c.P + c.Q) * 0.5f, LabelFor(c));
