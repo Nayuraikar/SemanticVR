@@ -1,0 +1,2 @@
+scene,preset,cvd,severity,edges_total,edges_skipped,edges_evaluated,edges_any_confusable,gt_confusable,albedo_wrong,albedo_false_pos,albedo_false_neg,lit_wrong,lit_false_pos,lit_false_neg,albedo_mean_abs_sim_err,lit_mean_abs_sim_err
+04_Medical,,Deutan,1,213,213,0,0,0,0,0,0,0,0,0,NaN,NaN

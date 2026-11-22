@@ -1,0 +1,61 @@
+scene,preset,tag_a,tag_b,class_a,class_b,distance_m,albedo_de_orig,albedo_de_sim,albedo_confusable,lit_de_orig,lit_de_sim,lit_confusable,gt_de_orig,gt_de_sim,gt_confusable,albedo_wrong,lit_wrong
+05_NightCity,Day,"Sign_ShopRed_E","Sign_ShopOlive_E","Shop Sign","Shop Sign",1.9,46.235,7.81,1,45.832,7.681,1,44.318,7.158,1,0,0
+05_NightCity,Day,"Sign_ShopOlive_E","Body","Shop Sign","Vehicle",2.153,20.194,18.33,0,24.222,22.579,0,23.484,21.784,0,0,0
+05_NightCity,Day,"Sign_ShopGreen_E","Sign_ShopOlive_E","Shop Sign","Shop Sign",0.2,20.426,6.483,1,20.499,6.545,1,19.326,6.01,1,0,0
+05_NightCity,Day,"Sign_ShopPink_C","Body","Shop Sign","Vehicle",2.694,38.367,33.097,0,37.034,30.57,0,34.796,27.698,0,0,0
+05_NightCity,Day,"Body","Body","Vehicle","Vehicle",2.7,63.098,66.941,0,63.891,68.099,0,59.997,63.884,0,0,0
+05_NightCity,Day,"Sign_ShopViolet_D","Body","Shop Sign","Vehicle",3.243,18.984,2.959,1,19.786,2.033,1,18.416,1.97,1,0,0
+05_NightCity,Day,"Sign_ShopGreen_C","Body","Shop Sign","Vehicle",2.959,50.319,48.048,0,49.437,47.208,0,46.613,43.983,0,0,0
+05_NightCity,Day,"Sign_ShopTeal_D","Body","Shop Sign","Vehicle",4.653,30.895,20.803,0,29.48,19.225,0,27.499,17.472,0,0,0
+05_NightCity,Day,"Body","Body","Vehicle","Vehicle",3.854,45.103,42.66,0,46.486,44.102,0,43.146,40.589,0,0,0
+05_NightCity,Day,"Sign_NeonRed_A","Sign_ShopGreen_A","Neon Sign","Shop Sign",0.2,69.451,8.401,1,69.351,10.902,1,67.498,11.237,1,0,0
+05_NightCity,Day,"Sign_ShopGreen_C","Sign_ShopPink_C","Shop Sign","Shop Sign",0.2,68.962,20.057,0,68.77,20.195,0,65.911,19.303,0,0,0
+05_NightCity,Day,"Sign_ShopPink_C","Body","Shop Sign","Vehicle",4.653,62.309,23.018,0,62.737,21.271,0,58.576,19.319,0,0,0
+05_NightCity,Day,"Sign_NeonCyan_F","Sign_NeonMagenta_F","Neon Sign","Neon Sign",0.2,54.581,12.632,1,52.558,16.961,0,52.045,16.702,0,1,0
+05_NightCity,Day,"Sign_NeonCyan_F","Sign_ShopOrange_F","Neon Sign","Shop Sign",1.9,51.234,46.02,0,56.292,44.74,0,55.646,43.682,0,0,0
+05_NightCity,Day,"Sign_ShopYellow_B","Body","Shop Sign","Vehicle",2.153,55.017,32.806,0,52.665,28.332,0,50.197,26.805,0,0,0
+05_NightCity,Day,"Sign_ShopYellow_B","Body","Shop Sign","Vehicle",2.694,38.533,32.824,0,36.052,29.1,0,33.986,27.79,0,0,0
+05_NightCity,Day,"Sign_ShopYellow_B","Sign_NeonAmber_B","Shop Sign","Neon Sign",0.2,12.454,3.564,1,13.898,10.146,1,14.318,10.829,1,0,0
+05_NightCity,Day,"Sign_ShopViolet_D","Sign_ShopBlue_D","Shop Sign","Shop Sign",1.9,18.984,2.959,1,18.806,2.979,1,17.624,2.782,1,0,0
+05_NightCity,Day,"Sign_ShopTeal_D","Sign_ShopBlue_D","Shop Sign","Shop Sign",0.2,30.895,20.803,0,30.613,20.508,0,29.2,19.538,0,0,0
+05_NightCity,Day,"Sign_ShopRed_E","Body","Shop Sign","Vehicle",2.477,48.349,25.598,0,50.657,29.651,0,48.81,28.498,0,0,0
+05_NightCity,Day,"Sign_ShopRed_E","Sign_ShopGreen_E","Shop Sign","Shop Sign",0.2,68.94,9.796,1,68.599,9.725,1,66.068,8.594,1,0,0
+05_NightCity,Day,"Sign_NeonMagenta_F","Sign_ShopOrange_F","Neon Sign","Shop Sign",0.2,48.052,49.877,0,49.983,54.664,0,47.762,53.185,0,0,0
+05_NightCity,Day,"Sign_ShopGreen_A","Body","Shop Sign","Vehicle",4.927,68.722,12.293,1,68.812,8.808,1,65.224,6.82,1,0,0
+05_NightCity,Day,"Sign_ShopViolet_D","Body","Shop Sign","Vehicle",3.624,68.954,63.58,0,71.121,66.218,0,67.595,63.308,0,0,0
+05_NightCity,Day,"Sign_ShopTeal_D","Body","Shop Sign","Vehicle",4.927,41.875,41.847,0,44.594,44.811,0,42.915,43.151,0,0,0
+05_NightCity,Day,"Sign_ShopGreen_E","Body","Shop Sign","Vehicle",2.153,35.264,21.607,0,38.195,25.669,0,36.825,24.663,0,0,0
+05_NightCity,Day,"Body","Body","Vehicle","Vehicle",2.7,59.201,6.711,1,61.329,6.881,1,56.801,5.787,1,0,0
+05_NightCity,Day,"Sign_NeonAmber_B","Body","Neon Sign","Vehicle",2.153,44.645,29.568,0,66.525,37.242,0,64.378,36.438,0,0,0
+05_NightCity,Day,"Sign_ShopViolet_D","Sign_ShopTeal_D","Shop Sign","Shop Sign",0.2,38.062,18.243,0,37.671,17.935,0,35.852,17.129,0,0,0
+05_NightCity,Day,"Sign_NeonAmber_B","Body","Neon Sign","Vehicle",2.694,42.784,29.806,0,40.462,37.6,0,39.474,36.988,0,0,0
+05_NightCity,Night,"Sign_ShopRed_E","Sign_ShopOlive_E","Shop Sign","Shop Sign",1.9,46.235,7.81,1,20.129,1.474,1,18.82,1.231,1,0,0
+05_NightCity,Night,"Sign_ShopOlive_E","Body","Shop Sign","Vehicle",2.153,20.194,18.33,0,11.086,9.614,1,10.937,8.492,1,1,0
+05_NightCity,Night,"Sign_ShopGreen_E","Sign_ShopOlive_E","Shop Sign","Shop Sign",0.2,20.426,6.483,1,22.33,6.48,1,20.589,5.25,1,0,0
+05_NightCity,Night,"Sign_ShopPink_C","Body","Shop Sign","Vehicle",2.694,38.367,33.097,0,23.841,22.728,0,23.007,20.458,0,0,0
+05_NightCity,Night,"Body","Body","Vehicle","Vehicle",2.7,63.098,66.941,0,35.955,39.882,0,30.519,34.772,0,0,0
+05_NightCity,Night,"Sign_ShopViolet_D","Body","Shop Sign","Vehicle",3.243,18.984,2.959,1,13.067,3.608,1,12.073,4.628,1,0,0
+05_NightCity,Night,"Sign_ShopGreen_C","Body","Shop Sign","Vehicle",2.959,50.319,48.048,0,30.165,25.888,0,25.945,20.994,0,0,0
+05_NightCity,Night,"Sign_ShopTeal_D","Body","Shop Sign","Vehicle",4.653,30.895,20.803,0,19.521,10.102,1,16.239,9.309,1,1,0
+05_NightCity,Night,"Body","Body","Vehicle","Vehicle",3.854,45.103,42.66,0,27.083,24.411,0,20.359,16.465,0,0,0
+05_NightCity,Night,"Sign_NeonRed_A","Sign_ShopGreen_A","Neon Sign","Shop Sign",0.2,69.451,8.401,1,62.413,44.269,0,57.792,43.858,0,1,0
+05_NightCity,Night,"Sign_ShopGreen_C","Sign_ShopPink_C","Shop Sign","Shop Sign",0.2,68.962,20.057,0,44.541,7.734,1,41.259,5.695,1,1,0
+05_NightCity,Night,"Sign_ShopPink_C","Body","Shop Sign","Vehicle",4.653,62.309,23.018,0,39.135,9.56,1,35.536,9.111,1,1,0
+05_NightCity,Night,"Sign_NeonCyan_F","Sign_NeonMagenta_F","Neon Sign","Neon Sign",0.2,54.581,12.632,1,55.437,17.858,0,54.936,17.82,0,1,0
+05_NightCity,Night,"Sign_NeonCyan_F","Sign_ShopOrange_F","Neon Sign","Shop Sign",1.9,51.234,46.02,0,79.257,66.907,0,75.877,62.487,0,0,0
+05_NightCity,Night,"Sign_ShopYellow_B","Body","Shop Sign","Vehicle",2.153,55.017,32.806,0,22.227,12.849,1,21.708,14.513,1,1,0
+05_NightCity,Night,"Sign_ShopYellow_B","Body","Shop Sign","Vehicle",2.694,38.533,32.824,0,27.225,19.135,0,28.043,20.647,0,0,0
+05_NightCity,Night,"Sign_ShopYellow_B","Sign_NeonAmber_B","Shop Sign","Neon Sign",0.2,12.454,3.564,1,52.292,50.267,0,51.777,49.611,0,1,0
+05_NightCity,Night,"Sign_ShopViolet_D","Sign_ShopBlue_D","Shop Sign","Shop Sign",1.9,18.984,2.959,1,12.66,4.14,1,11.946,2.877,1,0,0
+05_NightCity,Night,"Sign_ShopTeal_D","Sign_ShopBlue_D","Shop Sign","Shop Sign",0.2,30.895,20.803,0,20.181,10.951,1,15.369,7.983,1,1,0
+05_NightCity,Night,"Sign_ShopRed_E","Body","Shop Sign","Vehicle",2.477,48.349,25.598,0,18.39,8.714,1,15.097,7.431,1,1,0
+05_NightCity,Night,"Sign_ShopRed_E","Sign_ShopGreen_E","Shop Sign","Shop Sign",0.2,68.94,9.796,1,41.759,7.902,1,39.312,6.462,1,0,0
+05_NightCity,Night,"Sign_NeonMagenta_F","Sign_ShopOrange_F","Neon Sign","Shop Sign",0.2,48.052,49.877,0,54.771,61.66,0,50.321,57.585,0,0,0
+05_NightCity,Night,"Sign_ShopGreen_A","Body","Shop Sign","Vehicle",4.927,68.722,12.293,1,41.193,5.868,1,39.983,3.78,1,0,0
+05_NightCity,Night,"Sign_ShopViolet_D","Body","Shop Sign","Vehicle",3.624,68.954,63.58,0,36.038,36.438,0,27.852,30.502,0,0,0
+05_NightCity,Night,"Sign_ShopTeal_D","Body","Shop Sign","Vehicle",4.927,41.875,41.847,0,31.691,28.528,0,28.584,24.626,0,0,0
+05_NightCity,Night,"Sign_ShopGreen_E","Body","Shop Sign","Vehicle",2.153,35.264,21.607,0,30.802,15.047,0,30.197,13.247,1,1,1
+05_NightCity,Night,"Body","Body","Vehicle","Vehicle",2.7,59.201,6.711,1,35.118,7.406,1,34.069,7.19,1,0,0
+05_NightCity,Night,"Sign_NeonAmber_B","Body","Neon Sign","Vehicle",2.153,44.645,29.568,0,78.508,71.516,0,78.951,71.509,0,0,0
+05_NightCity,Night,"Sign_ShopViolet_D","Sign_ShopTeal_D","Shop Sign","Shop Sign",0.2,38.062,18.243,0,26.074,7.098,1,23.729,5.306,1,1,0
+05_NightCity,Night,"Sign_NeonAmber_B","Body","Neon Sign","Vehicle",2.694,42.784,29.806,0,75.976,77.105,0,75.976,77.148,0,0,0

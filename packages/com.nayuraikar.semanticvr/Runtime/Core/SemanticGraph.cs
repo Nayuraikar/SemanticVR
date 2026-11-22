@@ -5,15 +5,28 @@ using UnityEngine;
 
 namespace SemanticVR.Core
 {
-    /// <summary>One graph edge: a tag pair with the CIEDE2000 difference of their current albedos, as seen by normal
-    /// vision (<see cref="DeltaEOriginal"/>) and under the simulated CVD profile (<see cref="DeltaESimulated"/>).</summary>
+    /// <summary>One graph edge: a tag pair with the CIEDE2000 difference of their colours, as seen by normal vision and under the
+    /// simulated CVD profile. Both scorings are always present: the albedo-only baseline (<see cref="DeltaEOriginal"/>,
+    /// <see cref="DeltaESimulated"/>) and the C1 predicted lit colour (<see cref="LitDeltaEOriginal"/>, <see cref="LitDeltaESimulated"/>).</summary>
     public struct PairEdge
     {
         public SemanticTag A, B;
         public float Distance;
-        public float DeltaEOriginal, DeltaESimulated;
+        /// <summary>Albedo-only baseline: dE00 of the base albedos, normal vision.</summary>
+        public float DeltaEOriginal;
+        /// <summary>Albedo-only baseline: dE00 of the base albedos after CVD simulation.</summary>
+        public float DeltaESimulated;
+        /// <summary>C1: dE00 of the predicted lit colours, normal vision.</summary>
+        public float LitDeltaEOriginal;
+        /// <summary>C1: dE00 of the predicted lit colours after CVD simulation.</summary>
+        public float LitDeltaESimulated;
 
-        /// <summary>True when normal vision can tell the pair apart but the CVD observer cannot (the pairs we care about).</summary>
+        public float OriginalFor(ConfusionScoring mode) => mode == ConfusionScoring.Lit ? LitDeltaEOriginal : DeltaEOriginal;
+        public float SimulatedFor(ConfusionScoring mode) => mode == ConfusionScoring.Lit ? LitDeltaESimulated : DeltaESimulated;
+        public bool IsConfusable(ConfusionScoring mode, float simThreshold, float minOriginal) =>
+            OriginalFor(mode) >= minOriginal && SimulatedFor(mode) <= simThreshold;
+
+        /// <summary>True when normal vision can tell the pair apart but the CVD observer cannot (the pairs we care about). Albedo-only baseline.</summary>
         public bool IsConfusable(float simThreshold, float minOriginal) =>
             DeltaEOriginal >= minOriginal && DeltaESimulated <= simThreshold;
     }
@@ -34,6 +47,13 @@ namespace SemanticVR.Core
         public static float3 LabSimulated(Color srgb, CvdType type, float severity) =>
             ColorMath.RgbLinToLab(math.saturate(ColorMath.SimulateCvd(SrgbToLinear(srgb), type, severity)));
 
+        /// <summary>Lab of a LINEAR displayed colour (clamped to [0,1]) as seen by normal vision.</summary>
+        public static float3 LabLinear(float3 rgbLin) => ColorMath.RgbLinToLab(math.saturate(rgbLin));
+
+        /// <summary>Lab of a LINEAR displayed colour after CVD simulation (clamped before and after, as on screen).</summary>
+        public static float3 LabLinearSimulated(float3 rgbLin, CvdType type, float severity) =>
+            ColorMath.RgbLinToLab(math.saturate(ColorMath.SimulateCvd(math.saturate(rgbLin), type, severity)));
+
         public static float DeltaE(Color a, Color b) => ColorMath.Ciede2000(Lab(a), Lab(b));
 
         public static float DeltaESimulated(Color a, Color b, CvdType type, float severity) =>
@@ -43,12 +63,20 @@ namespace SemanticVR.Core
         /// Fill <paramref name="edges"/> with every registry pair whose bounds are closer than <paramref name="maxDistance"/> metres
         /// (tags with a null class, or with includeInGraph off, are skipped). Distance is the gap between bounding boxes. Lab values are computed once per tag.
         /// </summary>
-        public static void Build(List<PairEdge> edges, CvdType type, float severity, float maxDistance)
+        public static void Build(List<PairEdge> edges, CvdType type, float severity, float maxDistance) =>
+            Build(edges, type, severity, maxDistance, LitColorPredictor.Capture());
+
+        /// <summary>The viewer used to break ties between equal faces when predicting lit colour (the main camera, if any).</summary>
+        public static Vector3? ViewerPosition() { var c = Camera.main; return c != null ? c.transform.position : (Vector3?)null; }
+
+        /// <summary>As <see cref="Build(List{PairEdge},CvdType,float,float)"/> with an explicit lighting snapshot (tests, lighting what-ifs).</summary>
+        public static void Build(List<PairEdge> edges, CvdType type, float severity, float maxDistance, LightingSnapshot lighting)
         {
             edges.Clear();
             var tags = SemanticRegistry.Tags;
             int n = tags.Count;
-            var lab = new float3[n]; var labSim = new float3[n]; var ctr = new Vector3[n]; var ext = new Vector3[n]; var ok = new bool[n];
+            var lab = new float3[n]; var labSim = new float3[n]; var litLab = new float3[n]; var litLabSim = new float3[n]; var ctr = new Vector3[n]; var ext = new Vector3[n]; var ok = new bool[n];
+            var viewer = ViewerPosition();
             for (int i = 0; i < n; i++)
             {
                 var t = tags[i];
@@ -56,6 +84,9 @@ namespace SemanticVR.Core
                 if (!ok[i]) continue;
                 lab[i] = Lab(t.CurrentAlbedo);
                 labSim[i] = LabSimulated(t.CurrentAlbedo, type, severity);
+                float3 lit = LitColorPredictor.PredictDominant(t, lighting, viewer);
+                litLab[i] = LabLinear(lit);
+                litLabSim[i] = LabLinearSimulated(lit, type, severity);
                 var bounds = t.Bounds; ctr[i] = bounds.center; ext[i] = bounds.extents;
             }
             float max2 = maxDistance * maxDistance;
@@ -78,6 +109,8 @@ namespace SemanticVR.Core
                         A = a, B = b, Distance = Mathf.Sqrt(d2),
                         DeltaEOriginal = ColorMath.Ciede2000(lab[ia], lab[ib]),
                         DeltaESimulated = ColorMath.Ciede2000(labSim[ia], labSim[ib]),
+                        LitDeltaEOriginal = ColorMath.Ciede2000(litLab[ia], litLab[ib]),
+                        LitDeltaESimulated = ColorMath.Ciede2000(litLabSim[ia], litLabSim[ib]),
                     });
                 }
             }

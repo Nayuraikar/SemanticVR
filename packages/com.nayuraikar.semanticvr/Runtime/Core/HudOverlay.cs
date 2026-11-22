@@ -9,6 +9,7 @@ namespace SemanticVR.Core
     {
         public DebugViewController controller;
         [Tooltip("Optional: pair-graph gizmos (G toggles). Found automatically.")] public SemanticGraphGizmos graph;
+        LightingPresetSwitcher _lighting;
         public bool visible = true;
         [Tooltip("Press H to hide/show.")] public bool allowToggle = true;
 
@@ -27,6 +28,7 @@ namespace SemanticVR.Core
             if (controller == null) controller = GetComponent<DebugViewController>();
             if (controller == null) controller = FindFirstObjectByType<DebugViewController>();
             if (graph == null) graph = FindFirstObjectByType<SemanticGraphGizmos>();
+            _lighting = FindFirstObjectByType<LightingPresetSwitcher>();
         }
 
         void Update()
@@ -83,7 +85,8 @@ namespace SemanticVR.Core
             float pad = 14 * scale, row = 22 * scale, w = 350 * scale;
             float hintRow = 17 * scale;
             bool origHint = graph != null && controller.Mode == DebugViewMode.Original;
-            float h = pad * 2 + row * (graph != null ? 7 : 6) + hintRow * (origHint ? 3 : 2) + 6 * scale;
+            int rows = 6 + (graph != null ? 2 : 0) + (_lighting != null ? 1 : 0);
+            float h = pad * 2 + row * rows + hintRow * ((origHint ? 3 : 2) + 1) + 6 * scale;
             var r = new Rect(16 * scale, 16 * scale, w, h);
 
             GUI.color = Bg;
@@ -103,10 +106,15 @@ namespace SemanticVR.Core
             Row(ref y, x, iw, row, "Display", controller.Stereo ? "Stereo (SBS)" : "Mono");
             if (graph != null)
                 Row(ref y, x, iw, row, "Pair graph (G)", graph.showEdges ? $"On · showing {graph.ShownCount} of {graph.TotalCount}" : "Off");
+            if (graph != null)
+                Row(ref y, x, iw, row, "Scoring (K)", CvdDebugState.Scoring == ConfusionScoring.Lit ? "Lit colour (C1)" : "Albedo only");
+            if (_lighting != null && _lighting.Current != null)
+                Row(ref y, x, iw, row, "Lighting (N)", _lighting.Current.name);
             Row(ref y, x, iw, row, "Frame", $"{_smoothedDt * 1000f:0.0} ms   {1f / _smoothedDt:0} fps");
             // Two short lines: the single 70-char line overflowed the 350px panel and was clipped.
             GUI.Label(new Rect(x, y, iw, hintRow), "1/2/3 view · P/D/T type · [ ] severity", _hint); y += hintRow;
             GUI.Label(new Rect(x, y, iw, hintRow), "Tab stereo · G graph · +/- count · L labels · H HUD", _hint); y += hintRow;
+            GUI.Label(new Rect(x, y, iw, hintRow), "K scoring: albedo / lit colour" + (_lighting != null ? " · N lighting" : ""), _hint); y += hintRow;
             if (origHint) GUI.Label(new Rect(x, y, iw, hintRow), "Press 2 or 3 to see the simulation", _hint);
         }
 

@@ -1,0 +1,9 @@
+scene,preset,tag_a,tag_b,class_a,class_b,distance_m,albedo_de_orig,albedo_de_sim,albedo_confusable,lit_de_orig,lit_de_sim,lit_confusable,gt_de_orig,gt_de_sim,gt_confusable,albedo_wrong,lit_wrong
+02_Signals,,"Lens","Lens","Rail Signal","Rail Signal",3.62,46.666,22.197,0,58.152,22.199,0,58.399,22.324,0,0,0
+02_Signals,,"Lens","Lens","Rail Signal","Rail Signal",3.32,33.765,17.669,0,21.216,9.959,1,21.349,9.967,1,1,0
+02_Signals,,"Flasher","Flasher","Hazard Light","Hazard Light",0.42,36.696,35.289,0,44.366,44.341,0,42.929,43.148,0,0,0
+02_Signals,,"Flasher","Flasher","Hazard Light","Hazard Light",8.62,36.696,35.289,0,44.366,44.341,0,42.929,43.148,0,0,0
+02_Signals,,"Flasher","Flasher","Hazard Light","Hazard Light",7.9,0,0,0,0,0,0,0.068,0.044,0,0,0
+02_Signals,,"Flasher","Flasher","Hazard Light","Hazard Light",7.9,0,0,0,0,0,0,0,0,0,0,0
+02_Signals,,"Flasher","Flasher","Hazard Light","Hazard Light",7.18,36.696,35.289,0,44.366,44.341,0,42.923,43.158,0,0,0
+02_Signals,,"Flasher","Flasher","Hazard Light","Hazard Light",0.42,36.696,35.289,0,44.366,44.341,0,42.923,43.158,0,0,0

@@ -1,0 +1,3 @@
+scene,preset,cvd,severity,edges_total,edges_skipped,edges_evaluated,edges_any_confusable,gt_confusable,albedo_wrong,albedo_false_pos,albedo_false_neg,lit_wrong,lit_false_pos,lit_false_neg,albedo_mean_abs_sim_err,lit_mean_abs_sim_err
+05_NightCity,Day,Deutan,1,30,0,30,10,9,1,1,0,0,0,0,3.018,1.377
+05_NightCity,Night,Deutan,1,30,0,30,19,16,12,3,9,1,0,1,16.758,2.088

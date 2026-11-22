@@ -1,0 +1,13 @@
+scene,preset,group,n,mean_de00,p95_de00,max_de00,skipped_occluded,skipped_shadowed,skipped_textured
+01_Street,,"ALL",60,1.55461,2.97069,3.36841,0,7,1
+01_Street,,"ALL_lit_materials",60,1.55461,2.97069,3.36841,0,7,1
+01_Street,,"ALL_unlit_tagged_objects",0,NaN,NaN,NaN,0,7,1
+01_Street,,"CALIBRATION_unlit_patches",7,0,0,0,0,7,1
+01_Street,,"SKIPPED_shadowed_objects_rendered_anyway",7,10.36623,17.46851,17.46851,0,7,1
+01_Street,,"ALL_albedo_only_baseline",60,5.2268,8.16015,25.48265,0,7,1
+01_Street,,"class:Foliage",24,1.50216,1.73968,2.46749,0,7,1
+01_Street,,"class:Grass",16,1.05095,1.18374,1.18374,0,7,1
+01_Street,,"class:Hazard Light",2,1.52087,2.97069,2.97069,0,7,1
+01_Street,,"class:Road Sign",7,1.94732,2.55787,2.55787,0,7,1
+01_Street,,"class:Traffic Signal",1,0.26906,0.26906,0.26906,0,7,1
+01_Street,,"class:Vehicle",10,2.34677,3.36841,3.36841,0,7,1

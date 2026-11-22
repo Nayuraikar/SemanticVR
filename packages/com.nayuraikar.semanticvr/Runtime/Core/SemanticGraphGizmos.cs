@@ -53,9 +53,14 @@ namespace SemanticVR.Core
         float _lastBuild = float.NegativeInfinity;
         int _lastVersion = -1;
         CvdType _lastType; float _lastSeverity = -1f;
+        ConfusionScoring _lastScoring;
+        int _lastLightingVersion = -1;
 
         struct Candidate { public PairEdge Edge; public Vector3 P, Q; public float Alpha; }
-        static readonly Comparison<Candidate> ByDeltaE = (a, b) => a.Edge.DeltaESimulated.CompareTo(b.Edge.DeltaESimulated);
+        Comparison<Candidate> _byDeltaE;
+        Comparison<Candidate> ByDeltaE => _byDeltaE ??= (a, b) => a.Edge.SimulatedFor(Scoring).CompareTo(b.Edge.SimulatedFor(Scoring));
+        /// <summary>Which colours the overlay scores (K toggles): albedo-only baseline or predicted lit colour.</summary>
+        public static ConfusionScoring Scoring => CvdDebugState.Scoring;
 
         public IReadOnlyList<PairEdge> Edges => _edges;
         public int ConfusableCount { get; private set; }
@@ -67,6 +72,12 @@ namespace SemanticVR.Core
         public IReadOnlyList<LineRenderer> Lines => _pool;
         int _candidatesTotal;
 
+        void OnEnable()
+        {
+            // lighting changes (N, a moving sun) must rebuild the lit-colour scores: make sure something watches the irradiance fingerprint
+            if (FindFirstObjectByType<LightingChangeDetector>() == null) gameObject.AddComponent<LightingChangeDetector>();
+        }
+
         void Update()
         {
             var kb = UnityEngine.InputSystem.Keyboard.current;
@@ -76,11 +87,13 @@ namespace SemanticVR.Core
                 if (kb.equalsKey.wasPressedThisFrame || kb.numpadPlusKey.wasPressedThisFrame) AdjustMaxEdges(+maxEdgesStep);
                 if (kb.minusKey.wasPressedThisFrame || kb.numpadMinusKey.wasPressedThisFrame) AdjustMaxEdges(-maxEdgesStep);
                 if (kb.lKey.wasPressedThisFrame) CycleLabels();
+                if (kb.kKey.wasPressedThisFrame) ToggleScoring();
             }
             Refresh();
         }
 
         public void AdjustMaxEdges(int delta) => maxEdges = Mathf.Clamp(maxEdges + delta, 1, 200);
+        public void ToggleScoring() => CvdDebugState.Scoring = CvdDebugState.Scoring == ConfusionScoring.Lit ? ConfusionScoring.Albedo : ConfusionScoring.Lit;
         public void CycleLabels() => labelDetail = (GraphLabelDetail)(((int)labelDetail + 1) % 3);
 
         /// <summary>Rebuild the edge list now (also used by tests).</summary>
@@ -88,16 +101,17 @@ namespace SemanticVR.Core
         {
             SemanticGraph.Build(_edges, CvdDebugState.Type, CvdDebugState.Severity, maxEdgeDistance);
             ConfusableCount = 0;
-            foreach (var e in _edges) if (e.IsConfusable(confusableThreshold, minOriginalDeltaE)) ConfusableCount++;
+            foreach (var e in _edges) if (e.IsConfusable(Scoring, confusableThreshold, minOriginalDeltaE)) ConfusableCount++;
             _lastBuild = Time.realtimeSinceStartup; _lastVersion = SemanticRegistry.Version;
-            _lastType = CvdDebugState.Type; _lastSeverity = CvdDebugState.Severity;
+            _lastType = CvdDebugState.Type; _lastSeverity = CvdDebugState.Severity; _lastScoring = CvdDebugState.Scoring;
+            _lastLightingVersion = LightingChangeDetector.Version;
         }
 
         /// <summary>Rebuild if stale, pick the edges to show, and sync the line renderers. Called every frame by Update.</summary>
         public void Refresh()
         {
             if (!showEdges) { _shown.Clear(); _candidatesTotal = 0; SyncLines(); return; }
-            bool dirty = _lastVersion != SemanticRegistry.Version || _lastType != CvdDebugState.Type || !Mathf.Approximately(_lastSeverity, CvdDebugState.Severity);
+            bool dirty = _lastVersion != SemanticRegistry.Version || _lastScoring != CvdDebugState.Scoring || _lastLightingVersion != LightingChangeDetector.Version || _lastType != CvdDebugState.Type || !Mathf.Approximately(_lastSeverity, CvdDebugState.Severity);
             if (dirty || Time.realtimeSinceStartup - _lastBuild > refreshInterval) Rebuild(); // time-based too: objects move
             SelectEdges();
             SyncLines();
@@ -132,7 +146,7 @@ namespace SemanticVR.Core
             foreach (var e in _edges)
             {
                 if (e.A == null || e.B == null) continue;
-                if (!showAllEdges && !e.IsConfusable(confusableThreshold, minOriginalDeltaE)) continue;
+                if (!showAllEdges && !e.IsConfusable(Scoring, confusableThreshold, minOriginalDeltaE)) continue;
                 _candidatesTotal++;
                 Vector3 p = e.A.Bounds.ClosestPoint(e.B.Position), q = e.B.Bounds.ClosestPoint(p); // surface to surface, so lawns do not draw to their centre
                 if (!InFrustum(p) || !InFrustum(q)) continue;
@@ -198,7 +212,7 @@ namespace SemanticVR.Core
             {
                 var lr = GetLine(i);
                 var c = _shown[i];
-                var col = EdgeColour(c.Edge.DeltaESimulated); col.a = c.Alpha;
+                var col = EdgeColour(c.Edge.SimulatedFor(Scoring)); col.a = c.Alpha;
                 lr.startColor = lr.endColor = col;
                 lr.widthMultiplier = lineWidth;
                 lr.SetPosition(0, c.P); lr.SetPosition(1, c.Q);
@@ -210,8 +224,8 @@ namespace SemanticVR.Core
         static string Name(SemanticTag t) => t.Class != null ? $"{t.Class.displayName}:{t.StateName}" : t.name;
 
         string LabelFor(in Candidate c) => labelDetail == GraphLabelDetail.DeltaE
-            ? c.Edge.DeltaESimulated.ToString("0.0")
-            : $"{Name(c.Edge.A)} ↔ {Name(c.Edge.B)}  ΔE {c.Edge.DeltaESimulated:0.0}";
+            ? c.Edge.SimulatedFor(Scoring).ToString("0.0")
+            : $"{Name(c.Edge.A)} ↔ {Name(c.Edge.B)}  ΔE {c.Edge.SimulatedFor(Scoring):0.0}";
 
         // Runtime labels: drawn once per eye camera (IMGUI, projected through each eye's own pixel rect).
         void OnGUI()
@@ -255,7 +269,7 @@ namespace SemanticVR.Core
             if (!Application.isPlaying) { Rebuild(); SelectEdges(); }
             foreach (var c in _shown)
             {
-                var gc = EdgeColour(c.Edge.DeltaESimulated); gc.a = c.Alpha; Gizmos.color = gc;
+                var gc = EdgeColour(c.Edge.SimulatedFor(Scoring)); gc.a = c.Alpha; Gizmos.color = gc;
                 Gizmos.DrawLine(c.P, c.Q);
 #if UNITY_EDITOR
                 if (labelDetail != GraphLabelDetail.Off) UnityEditor.Handles.Label((c.P + c.Q) * 0.5f, LabelFor(c));

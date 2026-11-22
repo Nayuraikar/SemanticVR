@@ -22,8 +22,14 @@ namespace SemanticVR.Core
         public bool applyToRenderer = true;
         [Tooltip("Include in the confusable-pair graph. Disable for huge objects such as the sky dome.")]
         public bool includeInGraph = true;
+        [Tooltip("Use 'normalOverride' instead of the automatic dominant face normal when predicting this object's lit colour (C1).")]
+        public bool useNormalOverride;
+        [Tooltip("Surface normal (LOCAL space of this transform) used for lit-colour prediction when 'useNormalOverride' is on.")]
+        public Vector3 normalOverride = Vector3.back;
 
         MaterialPropertyBlock _mpb;
+        int _matInfoFrame = -1;
+        bool _unlit, _baseTex;
 
         /// <summary>Registry-assigned ID (equals <see cref="StableId"/> when that is set and free).</summary>
         public int Id { get; internal set; } = -1;
@@ -39,6 +45,54 @@ namespace SemanticVR.Core
         public Vector3 Position => targetRenderer != null ? targetRenderer.bounds.center : transform.position;
         /// <summary>World-space bounds used by the pair graph (a zero-size box at the transform if there is no renderer).</summary>
         public Bounds Bounds => targetRenderer != null ? targetRenderer.bounds : new Bounds(transform.position, Vector3.zero);
+
+        /// <summary>True when the renderer's material is an Unlit shader: it shows its colour regardless of lighting (screens, sky dome), so lit prediction returns the albedo.</summary>
+        public bool IsUnlit { get { RefreshMaterialInfo(); return _unlit; } }
+        /// <summary>True when the material has a base texture: the predictor only knows the tag colour, so such objects are skipped by validation.</summary>
+        public bool HasBaseTexture { get { RefreshMaterialInfo(); return _baseTex; } }
+
+        void RefreshMaterialInfo()
+        {
+            if (_matInfoFrame >= 0) return; // material swaps at runtime are not tracked; call InvalidateMaterialInfo() if you do
+            _matInfoFrame = 0;
+            var m = targetRenderer != null ? targetRenderer.sharedMaterial : null;
+            _unlit = m != null && m.shader != null && m.shader.name.Contains("Unlit");
+            _baseTex = m != null && m.HasProperty("_BaseMap") && m.GetTexture("_BaseMap") != null;
+        }
+        public void InvalidateMaterialInfo() => _matInfoFrame = -1;
+
+        /// <summary>
+        /// The face normal used to predict this object's lit colour when no surface point is known (world space).
+        /// <b>Choice (documented, see docs/design/phase2a.md):</b> take the object's three local axes scaled to world size; the
+        /// "dominant" face is the one with the largest area (e.g. the front of a thin panel, the top of a disc). Each axis has two
+        /// opposite faces, and axes whose face area is within 5% of the largest count as tied (spheres, cubes, poles), so we
+        /// pick, among the candidate faces, the one facing <paramref name="viewer"/> most; with no viewer, the one facing
+        /// <paramref name="toLight"/> most; with neither, the most upward one. Override with <see cref="useNormalOverride"/>.
+        /// </summary>
+        public Vector3 DominantNormal(Vector3? viewer = null, Vector3? toLight = null)
+        {
+            if (useNormalOverride && normalOverride.sqrMagnitude > 1e-6f) return transform.TransformDirection(normalOverride).normalized;
+            if (targetRenderer == null) return Vector3.up;
+            Vector3 size = targetRenderer.localBounds.size, sc = transform.lossyScale;
+            Vector3 s = new Vector3(Mathf.Abs(size.x * sc.x), Mathf.Abs(size.y * sc.y), Mathf.Abs(size.z * sc.z));
+            Vector3 area = new Vector3(s.y * s.z, s.x * s.z, s.x * s.y);
+            float max = Mathf.Max(area.x, Mathf.Max(area.y, area.z));
+            Vector3 best = Vector3.up; float bestScore = float.NegativeInfinity;
+            for (int axis = 0; axis < 3; axis++)
+            {
+                if (area[axis] < max * 0.95f) continue;
+                Vector3 a = transform.TransformDirection(axis == 0 ? Vector3.right : axis == 1 ? Vector3.up : Vector3.forward).normalized;
+                for (int sign = -1; sign <= 1; sign += 2)
+                {
+                    Vector3 n = a * sign;
+                    float score = viewer.HasValue ? Vector3.Dot(n, (viewer.Value - Position).normalized)
+                                : toLight.HasValue ? Vector3.Dot(n, toLight.Value)
+                                : n.y;
+                    if (score > bestScore) { bestScore = score; best = n; }
+                }
+            }
+            return best;
+        }
 
         void Reset() { targetRenderer = GetComponent<Renderer>(); }
         void OnEnable()

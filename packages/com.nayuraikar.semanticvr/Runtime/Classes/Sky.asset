@@ -21,3 +21,6 @@ MonoBehaviour:
   - name: Day
     albedo: {r: 0.56078434, g: 0.7058824, b: 0.8784314, a: 1}
     emissionIntensity: 0
+  - name: Night
+    albedo: {r: 0.105882354, g: 0.16470589, b: 0.33333334, a: 1}
+    emissionIntensity: 0

@@ -19,6 +19,9 @@ namespace SemanticVR.Editor
         public const int Warning = 13, Caution = 14, Advisory = 15, NormalStatus = 16, DisplayText = 17, RunwayLight = 18,
                          AlarmHigh = 19, AlarmMedium = 20, AlarmLow = 21, VitalTrace = 22, GasCylinder = 23, DrugLabel = 24, StatusLight = 25, Tissue = 26;
 
+        // Phase 2A: 05_NightCity. Colours chosen with python/scripts/phase2a_nightcity.py (see docs/design/phase2a.md).
+        public const int ShopSign = 27, NeonSign = 28;
+
         static Color C(string hex) { ColorUtility.TryParseHtmlString(hex, out var c); return c; }
         static SemanticState S(string n, string hex, float emission = 0f) => SemanticClass.State(n, C(hex), emission);
 
@@ -54,6 +57,9 @@ namespace SemanticVR.Editor
                 case GasCylinder: c.Configure(id, "Gas Cylinder", 0.90f, 4f, false, S("Oxygen", "#2E9E4F"), S("Helium", "#8A5A32"), S("Air", "#E8C21E"), S("NitrousOxide", "#2F5FA8"), S("CO2", "#8C9096"), S("Vacuum", "#F1EFE9")); break;
                 case DrugLabel: c.Configure(id, "Drug Label", 0.90f, 4f, false, S("Yellow", "#E8C21E"), S("Blue", "#2F5FA8"), S("Red", "#C62828"), S("Orange", "#E8761E"), S("Violet", "#7B4BA8"), S("Green", "#2E9E4F")); break;
                 case StatusLight: c.Configure(id, "Status Light", 0.90f, 4f, false, S("Off", "#2A2C2F"), S("Green", "#3DBB5C", 2.5f), S("Amber", "#F2A516", 2.5f), S("Red", "#E5322D", 2.5f)); break;
+                case ShopSign: c.Configure(id, "Shop Sign", 0.60f, 8f, false, S("Red", "#C62828"), S("Green", "#2E9E4F"), S("Olive", "#8C8A2E"), S("Orange", "#E8761E"), S("Blue", "#2F5FA8"),
+                                           S("Violet", "#7B4BA8"), S("Teal", "#2A8F8A"), S("Pink", "#D9739F"), S("Yellow", "#E8C21E")); break;
+                case NeonSign: c.Configure(id, "Neon Sign", 0.80f, 5f, false, S("Red", "#E5322D", 1.5f), S("Green", "#3DDC6A", 1.5f), S("Amber", "#F2A516", 1.5f), S("Cyan", "#38D0E0", 1.5f), S("Magenta", "#E040C8", 1.5f)); break;
                 case Tissue: c.Configure(id, "Tissue Tint", 0.85f, 5f, false, S("Pale", "#E0B49A"), S("Cyanosis", "#9C9FB8"), S("Wound", "#B84A4A")); break;
             }
         }
@@ -66,6 +72,7 @@ namespace SemanticVR.Editor
             (Warning, "Warning"), (Caution, "Caution"), (Advisory, "Advisory"), (NormalStatus, "NormalStatus"), (DisplayText, "DisplayText"), (RunwayLight, "RunwayLight"),
             (AlarmHigh, "AlarmHigh"), (AlarmMedium, "AlarmMedium"), (AlarmLow, "AlarmLow"), (VitalTrace, "VitalTrace"), (GasCylinder, "GasCylinder"),
             (DrugLabel, "DrugLabel"), (StatusLight, "StatusLight"), (Tissue, "Tissue"),
+            (ShopSign, "ShopSign"), (NeonSign, "NeonSign"),
         };
 
         static string PathOf(string file) => $"{Dir}/{file}.asset";
@@ -94,6 +101,16 @@ namespace SemanticVR.Editor
             foreach (var (cid, file) in All)
                 if (cid == id) return AssetDatabase.LoadAssetAtPath<SemanticClass>(PathOf(file));
             return null;
+        }
+
+        /// <summary>Append <paramref name="state"/> to an existing class asset if no state of that name exists (additive migration: existing state indices never change).</summary>
+        public static void EnsureState(int id, SemanticState state)
+        {
+            var c = Load(id);
+            if (c == null || c.IndexOfState(state.name) >= 0) return;
+            c.states.Add(state);
+            EditorUtility.SetDirty(c);
+            AssetDatabase.SaveAssets();
         }
 
         /// <summary>Every SemanticClass asset in the project (defaults included), ordered by ID.</summary>

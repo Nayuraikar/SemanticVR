@@ -40,6 +40,11 @@
       "displayName": "04 Medical",
       "description": "ICU bay: patient monitor with alarm banners and traces, medical-gas cylinders, drug labels, infusion pump, skin and cyanosis tint.",
       "path": "Samples~/04_Medical"
+    },
+    {
+      "displayName": "05 NightCity",
+      "description": "Shopping street with Day and Night lighting presets (N): painted and neon signs whose deutan confusability depends on the lighting.",
+      "path": "Samples~/05_NightCity"
     }
   ]
 }

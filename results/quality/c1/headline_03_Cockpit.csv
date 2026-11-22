@@ -1,0 +1,296 @@
+scene,preset,tag_a,tag_b,class_a,class_b,distance_m,albedo_de_orig,albedo_de_sim,albedo_confusable,lit_de_orig,lit_de_sim,lit_confusable,gt_de_orig,gt_de_sim,gt_confusable,albedo_wrong,lit_wrong
+03_Cockpit,,"Light_03","Light_22","Caution","Normal Status",0.351,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_03","Light_12","Caution","Caution",0.162,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_03","Light_10","Caution","Advisory",0.467,62.52,65.866,0,92.391,91.703,0,87.222,86.525,0,0,0
+03_Cockpit,,"Light_00","Light_03","Caution","Caution",0.445,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_03","Light_14","Caution","Advisory",0.162,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_01","Light_03","Normal Status","Caution",0.26,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_03","Light_33","Caution","Caution",0.543,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_03","Light_21","Caution","Caution",0.43,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_03","Light_06","Caution","Caution",0.445,55.681,58.223,0,87.103,85.091,0,82.475,80.702,0,0,0
+03_Cockpit,,"Light_03","Light_23","Caution","Normal Status",0.343,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_03","Light_13","Caution","Advisory",0.143,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_03","Light_25","Caution","Normal Status",0.43,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_03","Light_11","Caution","Advisory",0.297,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_03","Light_16","Caution","Advisory",0.467,56.819,64.173,0,56.842,63.01,0,56.608,62.974,0,0,0
+03_Cockpit,,"Light_03","Light_04","Caution","Normal Status",0.075,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_03","Light_32","Caution","Advisory",0.548,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_03","Light_24","Caution","Caution",0.351,55.681,58.223,0,87.103,85.091,0,82.475,80.702,0,0,0
+03_Cockpit,,"Light_03","Light_05","Caution","Normal Status",0.26,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_02","Light_03","Normal Status","Caution",0.075,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_03","Light_15","Caution","Caution",0.297,55.681,58.223,0,87.103,85.091,0,82.475,80.702,0,0,0
+03_Cockpit,,"Light_03","Light_34","Caution","Advisory",0.548,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_12","Light_22","Caution","Normal Status",0.143,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_10","Light_22","Advisory","Normal Status",0.297,55.059,50.166,0,86.287,81.359,0,83.125,78.869,0,0,0
+03_Cockpit,,"Light_00","Light_22","Caution","Normal Status",0.43,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_14","Light_22","Advisory","Normal Status",0.297,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_20","Light_22","Normal Status","Normal Status",0.26,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_22","Light_35","Normal Status","Advisory",0.467,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_01","Light_22","Normal Status","Normal Status",0.351,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_22","Light_33","Normal Status","Caution",0.162,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_21","Light_22","Caution","Normal Status",0.075,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_22","Light_30","Normal Status","Caution",0.297,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_22","Light_23","Normal Status","Normal Status",0.075,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_13","Light_22","Advisory","Normal Status",0.162,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_22","Light_25","Normal Status","Normal Status",0.445,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_11","Light_22","Advisory","Normal Status",0.162,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_04","Light_22","Normal Status","Normal Status",0.43,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_22","Light_32","Normal Status","Advisory",0.143,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_22","Light_24","Normal Status","Caution",0.26,52.633,42.693,0,84.773,77.322,0,80.889,74.344,0,0,0
+03_Cockpit,,"Light_02","Light_22","Normal Status","Normal Status",0.343,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_15","Light_22","Caution","Normal Status",0.467,52.633,42.693,0,84.773,77.322,0,80.889,74.344,0,0,0
+03_Cockpit,,"Light_22","Light_34","Normal Status","Advisory",0.297,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_22","Light_31","Normal Status","Advisory",0.162,55.059,50.166,0,86.287,81.359,0,83.125,78.869,0,0,0
+03_Cockpit,,"Light_14","Light_36","Advisory","Caution",0.43,69.864,69.053,0,84.742,83.996,0,79.641,79.059,0,0,0
+03_Cockpit,,"Light_35","Light_36","Advisory","Caution",0.075,69.864,69.053,0,84.742,83.996,0,79.641,79.059,0,0,0
+03_Cockpit,,"Light_07","Light_36","Normal Status","Caution",0.548,15.39,10.407,1,11.891,7.162,1,9.848,6.122,0,1,1
+03_Cockpit,,"Light_36","Light_37","Caution","Advisory",0.075,47.254,48.313,0,70.812,68.003,0,69.009,66.012,0,0,0
+03_Cockpit,,"Light_33","Light_36","Caution","Caution",0.445,55.681,58.223,0,87.103,85.091,0,82.475,80.702,0,0,0
+03_Cockpit,,"Light_06","Light_36","Caution","Caution",0.543,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_27","Light_36","Caution","Caution",0.162,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_23","Light_36","Normal Status","Caution",0.467,52.633,42.693,0,84.773,77.322,0,80.889,74.344,0,0,0
+03_Cockpit,,"Light_25","Light_36","Normal Status","Caution",0.162,52.633,42.693,0,84.773,77.322,0,80.889,74.344,0,0,0
+03_Cockpit,,"Light_16","Light_36","Advisory","Caution",0.343,47.254,48.313,0,70.812,68.003,0,69.009,66.012,0,0,0
+03_Cockpit,,"Light_17","Light_36","Advisory","Caution",0.351,47.254,48.313,0,70.812,68.003,0,69.009,66.012,0,0,0
+03_Cockpit,,"Light_24","Light_36","Caution","Caution",0.297,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_05","Light_36","Normal Status","Caution",0.548,52.633,42.693,0,84.773,77.322,0,80.889,74.344,0,0,0
+03_Cockpit,,"Light_15","Light_36","Caution","Caution",0.351,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_34","Light_36","Advisory","Caution",0.26,69.864,69.053,0,84.742,83.996,0,79.641,79.059,0,0,0
+03_Cockpit,,"Light_26","Light_36","Normal Status","Caution",0.143,15.39,10.407,1,11.891,7.162,1,9.848,6.122,0,1,1
+03_Cockpit,,"Light_10","Light_12","Advisory","Caution",0.26,62.52,65.866,0,92.391,91.703,0,87.222,86.525,0,0,0
+03_Cockpit,,"Light_00","Light_12","Caution","Caution",0.297,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_12","Light_14","Caution","Advisory",0.26,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_12","Light_20","Caution","Normal Status",0.297,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_01","Light_12","Normal Status","Caution",0.162,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_12","Light_33","Caution","Caution",0.351,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_12","Light_21","Caution","Caution",0.162,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_12","Light_30","Caution","Caution",0.43,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_12","Light_23","Caution","Normal Status",0.162,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_12","Light_13","Caution","Advisory",0.075,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_12","Light_25","Caution","Normal Status",0.467,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_11","Light_12","Advisory","Caution",0.075,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_04","Light_12","Normal Status","Caution",0.297,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_12","Light_32","Caution","Advisory",0.343,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_12","Light_24","Caution","Caution",0.297,55.681,58.223,0,87.103,85.091,0,82.475,80.702,0,0,0
+03_Cockpit,,"Light_05","Light_12","Normal Status","Caution",0.467,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_02","Light_12","Normal Status","Caution",0.143,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_12","Light_15","Caution","Caution",0.445,55.681,58.223,0,87.103,85.091,0,82.475,80.702,0,0,0
+03_Cockpit,,"Light_12","Light_34","Caution","Advisory",0.43,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_12","Light_31","Caution","Advisory",0.351,62.52,65.866,0,92.391,91.703,0,87.222,86.525,0,0,0
+03_Cockpit,,"Light_00","Light_10","Caution","Advisory",0.143,62.52,65.866,0,92.391,91.703,0,87.222,86.525,0,0,0
+03_Cockpit,,"Light_10","Light_20","Advisory","Normal Status",0.143,55.059,50.166,0,86.287,81.359,0,83.125,78.869,0,0,0
+03_Cockpit,,"Light_01","Light_10","Normal Status","Advisory",0.162,55.059,50.166,0,86.287,81.359,0,83.125,78.869,0,0,0
+03_Cockpit,,"Light_10","Light_21","Advisory","Caution",0.162,62.52,65.866,0,92.391,91.703,0,87.222,86.525,0,0,0
+03_Cockpit,,"Light_10","Light_30","Advisory","Caution",0.343,62.52,65.866,0,92.391,91.703,0,87.222,86.525,0,0,0
+03_Cockpit,,"Light_10","Light_23","Advisory","Normal Status",0.467,55.059,50.166,0,86.287,81.359,0,83.125,78.869,0,0,0
+03_Cockpit,,"Light_10","Light_13","Advisory","Advisory",0.445,73.609,73.858,0,87.886,87.954,0,82.402,82.414,0,0,0
+03_Cockpit,,"Light_10","Light_11","Advisory","Advisory",0.075,73.609,73.858,0,87.886,87.954,0,82.402,82.414,0,0,0
+03_Cockpit,,"Light_10","Light_32","Advisory","Advisory",0.43,73.609,73.858,0,87.886,87.954,0,82.402,82.414,0,0,0
+03_Cockpit,,"Light_02","Light_10","Normal Status","Advisory",0.297,55.059,50.166,0,86.287,81.359,0,83.125,78.869,0,0,0
+03_Cockpit,,"Light_10","Light_31","Advisory","Advisory",0.351,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_00","Light_20","Caution","Normal Status",0.343,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_00","Light_01","Caution","Normal Status",0.075,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_00","Light_21","Caution","Caution",0.351,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_00","Light_30","Caution","Caution",0.543,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_00","Light_13","Caution","Advisory",0.467,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_00","Light_11","Caution","Advisory",0.162,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_00","Light_02","Caution","Normal Status",0.26,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_00","Light_31","Caution","Advisory",0.548,62.52,65.866,0,92.391,91.703,0,87.222,86.525,0,0,0
+03_Cockpit,,"Light_14","Light_35","Advisory","Advisory",0.351,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_01","Light_14","Normal Status","Advisory",0.467,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_07","Light_14","Normal Status","Advisory",0.467,74.734,74.741,0,88.948,88.979,0,82.971,82.99,0,0,0
+03_Cockpit,,"Light_14","Light_33","Advisory","Caution",0.351,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_14","Light_21","Advisory","Caution",0.467,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_06","Light_14","Caution","Advisory",0.297,69.864,69.053,0,84.742,83.996,0,79.641,79.059,0,0,0
+03_Cockpit,,"Light_14","Light_27","Advisory","Caution",0.467,69.864,69.053,0,84.742,83.996,0,79.641,79.059,0,0,0
+03_Cockpit,,"Light_14","Light_23","Advisory","Normal Status",0.162,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_13","Light_14","Advisory","Advisory",0.075,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_14","Light_25","Advisory","Normal Status",0.162,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_11","Light_14","Advisory","Advisory",0.445,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_14","Light_16","Advisory","Advisory",0.26,41.774,44.039,0,25.879,25.815,0,25.9,25.735,0,0,0
+03_Cockpit,,"Light_04","Light_14","Normal Status","Advisory",0.143,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_14","Light_17","Advisory","Advisory",0.445,41.774,44.039,0,25.879,25.815,0,25.9,25.735,0,0,0
+03_Cockpit,,"Light_14","Light_32","Advisory","Advisory",0.43,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_14","Light_24","Advisory","Caution",0.143,69.864,69.053,0,84.742,83.996,0,79.641,79.059,0,0,0
+03_Cockpit,,"Light_05","Light_14","Normal Status","Advisory",0.162,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_02","Light_14","Normal Status","Advisory",0.297,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_14","Light_15","Advisory","Caution",0.075,69.864,69.053,0,84.742,83.996,0,79.641,79.059,0,0,0
+03_Cockpit,,"Light_14","Light_34","Advisory","Advisory",0.343,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_14","Light_26","Advisory","Normal Status",0.297,74.734,74.741,0,88.948,88.979,0,82.971,82.99,0,0,0
+03_Cockpit,,"Light_01","Light_20","Normal Status","Normal Status",0.351,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_20","Light_33","Normal Status","Caution",0.467,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_20","Light_21","Normal Status","Caution",0.075,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_20","Light_30","Normal Status","Caution",0.143,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_20","Light_23","Normal Status","Normal Status",0.445,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_13","Light_20","Advisory","Normal Status",0.467,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_11","Light_20","Advisory","Normal Status",0.162,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_20","Light_32","Normal Status","Advisory",0.297,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_02","Light_20","Normal Status","Normal Status",0.43,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_20","Light_31","Normal Status","Advisory",0.162,55.059,50.166,0,86.287,81.359,0,83.125,78.869,0,0,0
+03_Cockpit,,"Light_35","Light_37","Advisory","Advisory",0.26,41.774,44.039,0,25.879,25.815,0,25.9,25.735,0,0,0
+03_Cockpit,,"Light_33","Light_35","Caution","Advisory",0.26,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_06","Light_35","Caution","Advisory",0.548,69.864,69.053,0,84.742,83.996,0,79.641,79.059,0,0,0
+03_Cockpit,,"Light_27","Light_35","Caution","Advisory",0.297,69.864,69.053,0,84.742,83.996,0,79.641,79.059,0,0,0
+03_Cockpit,,"Light_23","Light_35","Normal Status","Advisory",0.297,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_13","Light_35","Advisory","Advisory",0.43,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_25","Light_35","Normal Status","Advisory",0.143,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_16","Light_35","Advisory","Advisory",0.351,41.774,44.039,0,25.879,25.815,0,25.9,25.735,0,0,0
+03_Cockpit,,"Light_04","Light_35","Normal Status","Advisory",0.548,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_17","Light_35","Advisory","Advisory",0.43,41.774,44.039,0,25.879,25.815,0,25.9,25.735,0,0,0
+03_Cockpit,,"Light_32","Light_35","Advisory","Advisory",0.445,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_24","Light_35","Caution","Advisory",0.162,69.864,69.053,0,84.742,83.996,0,79.641,79.059,0,0,0
+03_Cockpit,,"Light_05","Light_35","Normal Status","Advisory",0.543,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_15","Light_35","Caution","Advisory",0.343,69.864,69.053,0,84.742,83.996,0,79.641,79.059,0,0,0
+03_Cockpit,,"Light_34","Light_35","Advisory","Advisory",0.075,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_26","Light_35","Normal Status","Advisory",0.162,74.734,74.741,0,88.948,88.979,0,82.971,82.99,0,0,0
+03_Cockpit,,"Light_01","Light_21","Normal Status","Caution",0.343,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_01","Light_30","Normal Status","Caution",0.548,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_01","Light_23","Normal Status","Normal Status",0.43,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_01","Light_13","Normal Status","Advisory",0.297,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_01","Light_11","Normal Status","Advisory",0.143,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_01","Light_04","Normal Status","Normal Status",0.445,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_01","Light_32","Normal Status","Advisory",0.548,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_01","Light_02","Normal Status","Normal Status",0.075,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_01","Light_31","Normal Status","Advisory",0.543,55.059,50.166,0,86.287,81.359,0,83.125,78.869,0,0,0
+03_Cockpit,,"Light_07","Light_37","Normal Status","Advisory",0.543,42.16,40.217,0,68.825,65.966,0,67.352,64.288,0,0,0
+03_Cockpit,,"Light_06","Light_07","Caution","Normal Status",0.075,15.39,10.407,1,11.891,7.162,1,9.848,6.122,0,1,1
+03_Cockpit,,"Light_07","Light_27","Normal Status","Caution",0.343,15.39,10.407,1,11.891,7.162,1,9.848,6.122,0,1,1
+03_Cockpit,,"Light_07","Light_25","Normal Status","Normal Status",0.43,51.552,47.645,0,85.282,80.702,0,82.207,78.34,0,0,0
+03_Cockpit,,"Light_07","Light_16","Normal Status","Advisory",0.162,42.16,40.217,0,68.825,65.966,0,67.352,64.288,0,0,0
+03_Cockpit,,"Light_04","Light_07","Normal Status","Normal Status",0.445,51.552,47.645,0,85.282,80.702,0,82.207,78.34,0,0,0
+03_Cockpit,,"Light_07","Light_17","Normal Status","Advisory",0.143,42.16,40.217,0,68.825,65.966,0,67.352,64.288,0,0,0
+03_Cockpit,,"Light_05","Light_07","Normal Status","Normal Status",0.26,51.552,47.645,0,85.282,80.702,0,82.207,78.34,0,0,0
+03_Cockpit,,"Light_07","Light_15","Normal Status","Caution",0.297,15.39,10.407,1,11.891,7.162,1,9.848,6.122,0,1,1
+03_Cockpit,,"Light_07","Light_26","Normal Status","Normal Status",0.351,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_06","Light_37","Caution","Advisory",0.548,47.254,48.313,0,70.812,68.003,0,69.009,66.012,0,0,0
+03_Cockpit,,"Light_27","Light_37","Caution","Advisory",0.143,47.254,48.313,0,70.812,68.003,0,69.009,66.012,0,0,0
+03_Cockpit,,"Light_25","Light_37","Normal Status","Advisory",0.297,53.123,51.64,0,45.85,46.618,0,45.74,46.657,0,0,0
+03_Cockpit,,"Light_16","Light_37","Advisory","Advisory",0.351,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_17","Light_37","Advisory","Advisory",0.343,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_24","Light_37","Caution","Advisory",0.467,47.254,48.313,0,70.812,68.003,0,69.009,66.012,0,0,0
+03_Cockpit,,"Light_15","Light_37","Caution","Advisory",0.43,47.254,48.313,0,70.812,68.003,0,69.009,66.012,0,0,0
+03_Cockpit,,"Light_34","Light_37","Advisory","Advisory",0.445,41.774,44.039,0,25.879,25.815,0,25.9,25.735,0,0,0
+03_Cockpit,,"Light_26","Light_37","Normal Status","Advisory",0.162,42.16,40.217,0,68.825,65.966,0,67.352,64.288,0,0,0
+03_Cockpit,,"Light_21","Light_33","Caution","Caution",0.297,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_30","Light_33","Caution","Caution",0.445,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_23","Light_33","Normal Status","Caution",0.143,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_13","Light_33","Advisory","Caution",0.343,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_25","Light_33","Normal Status","Caution",0.297,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_11","Light_33","Advisory","Caution",0.43,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_04","Light_33","Normal Status","Caution",0.548,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_32","Light_33","Advisory","Caution",0.075,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_24","Light_33","Caution","Caution",0.162,55.681,58.223,0,87.103,85.091,0,82.475,80.702,0,0,0
+03_Cockpit,,"Light_02","Light_33","Normal Status","Caution",0.548,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_15","Light_33","Caution","Caution",0.43,55.681,58.223,0,87.103,85.091,0,82.475,80.702,0,0,0
+03_Cockpit,,"Light_33","Light_34","Caution","Advisory",0.075,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_26","Light_33","Normal Status","Caution",0.467,62.115,63.325,0,92.056,91.429,0,86.613,86.08,0,0,0
+03_Cockpit,,"Light_31","Light_33","Advisory","Caution",0.26,62.52,65.866,0,92.391,91.703,0,87.222,86.525,0,0,0
+03_Cockpit,,"GsScale","RouteBend","Display Text","Display Text",0.373,54.581,12.632,1,52.632,17.221,0,39.084,34.223,0,1,0
+03_Cockpit,,"Light_21","Light_30","Caution","Caution",0.162,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_21","Light_23","Caution","Normal Status",0.26,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_13","Light_21","Advisory","Caution",0.297,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_11","Light_21","Advisory","Caution",0.143,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_21","Light_32","Caution","Advisory",0.162,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_21","Light_24","Caution","Caution",0.445,55.681,58.223,0,87.103,85.091,0,82.475,80.702,0,0,0
+03_Cockpit,,"Light_02","Light_21","Normal Status","Caution",0.351,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_21","Light_34","Caution","Advisory",0.467,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_21","Light_31","Caution","Advisory",0.143,62.52,65.866,0,92.391,91.703,0,87.222,86.525,0,0,0
+03_Cockpit,,"Light_06","Light_27","Caution","Caution",0.351,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_06","Light_13","Caution","Advisory",0.467,69.864,69.053,0,84.742,83.996,0,79.641,79.059,0,0,0
+03_Cockpit,,"Light_06","Light_25","Caution","Normal Status",0.351,52.633,42.693,0,84.773,77.322,0,80.889,74.344,0,0,0
+03_Cockpit,,"Light_06","Light_16","Caution","Advisory",0.143,47.254,48.313,0,70.812,68.003,0,69.009,66.012,0,0,0
+03_Cockpit,,"Light_04","Light_06","Normal Status","Caution",0.26,52.633,42.693,0,84.773,77.322,0,80.889,74.344,0,0,0
+03_Cockpit,,"Light_06","Light_17","Caution","Advisory",0.162,47.254,48.313,0,70.812,68.003,0,69.009,66.012,0,0,0
+03_Cockpit,,"Light_06","Light_24","Caution","Caution",0.43,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_05","Light_06","Normal Status","Caution",0.075,52.633,42.693,0,84.773,77.322,0,80.889,74.344,0,0,0
+03_Cockpit,,"Light_06","Light_15","Caution","Caution",0.162,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_06","Light_26","Caution","Normal Status",0.343,15.39,10.407,1,11.891,7.162,1,9.848,6.122,0,1,1
+03_Cockpit,,"Light_23","Light_30","Normal Status","Caution",0.467,41.665,13.959,1,25.42,13.373,1,25.407,13.333,1,0,0
+03_Cockpit,,"Light_11","Light_30","Advisory","Caution",0.351,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_30","Light_32","Caution","Advisory",0.26,30.05,28.51,0,29.933,29.129,0,29.972,29.168,0,0,0
+03_Cockpit,,"Light_30","Light_31","Caution","Advisory",0.075,62.52,65.866,0,92.391,91.703,0,87.222,86.525,0,0,0
+03_Cockpit,,"Light_25","Light_27","Normal Status","Caution",0.26,52.633,42.693,0,84.773,77.322,0,80.889,74.344,0,0,0
+03_Cockpit,,"Light_16","Light_27","Advisory","Caution",0.162,47.254,48.313,0,70.812,68.003,0,69.009,66.012,0,0,0
+03_Cockpit,,"Light_17","Light_27","Advisory","Caution",0.143,47.254,48.313,0,70.812,68.003,0,69.009,66.012,0,0,0
+03_Cockpit,,"Light_24","Light_27","Caution","Caution",0.445,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_05","Light_27","Normal Status","Caution",0.43,52.633,42.693,0,84.773,77.322,0,80.889,74.344,0,0,0
+03_Cockpit,,"Light_15","Light_27","Caution","Caution",0.297,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_27","Light_34","Caution","Advisory",0.467,69.864,69.053,0,84.742,83.996,0,79.641,79.059,0,0,0
+03_Cockpit,,"Light_26","Light_27","Normal Status","Caution",0.075,15.39,10.407,1,11.891,7.162,1,9.848,6.122,0,1,1
+03_Cockpit,,"Light_13","Light_23","Advisory","Normal Status",0.143,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_23","Light_25","Normal Status","Normal Status",0.26,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_11","Light_23","Advisory","Normal Status",0.297,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_16","Light_23","Advisory","Normal Status",0.467,53.123,51.64,0,45.85,46.618,0,45.74,46.657,0,0,0
+03_Cockpit,,"Light_04","Light_23","Normal Status","Normal Status",0.351,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_23","Light_32","Normal Status","Advisory",0.162,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_23","Light_24","Normal Status","Caution",0.075,52.633,42.693,0,84.773,77.322,0,80.889,74.344,0,0,0
+03_Cockpit,,"Light_05","Light_23","Normal Status","Normal Status",0.43,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_02","Light_23","Normal Status","Normal Status",0.351,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_15","Light_23","Caution","Normal Status",0.297,52.633,42.693,0,84.773,77.322,0,80.889,74.344,0,0,0
+03_Cockpit,,"Light_23","Light_34","Normal Status","Advisory",0.162,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_23","Light_26","Normal Status","Normal Status",0.445,51.552,47.645,0,85.282,80.702,0,82.207,78.34,0,0,0
+03_Cockpit,,"Light_23","Light_31","Normal Status","Advisory",0.297,55.059,50.166,0,86.287,81.359,0,83.125,78.869,0,0,0
+03_Cockpit,,"Light_13","Light_25","Advisory","Normal Status",0.297,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_11","Light_13","Advisory","Advisory",0.26,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_13","Light_16","Advisory","Advisory",0.445,41.774,44.039,0,25.879,25.815,0,25.9,25.735,0,0,0
+03_Cockpit,,"Light_04","Light_13","Normal Status","Advisory",0.162,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_13","Light_32","Advisory","Advisory",0.351,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_13","Light_24","Advisory","Caution",0.162,69.864,69.053,0,84.742,83.996,0,79.641,79.059,0,0,0
+03_Cockpit,,"Light_05","Light_13","Normal Status","Advisory",0.297,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_02","Light_13","Normal Status","Advisory",0.162,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_13","Light_15","Advisory","Caution",0.26,69.864,69.053,0,84.742,83.996,0,79.641,79.059,0,0,0
+03_Cockpit,,"Light_13","Light_34","Advisory","Advisory",0.351,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_13","Light_26","Advisory","Normal Status",0.467,74.734,74.741,0,88.948,88.979,0,82.971,82.99,0,0,0
+03_Cockpit,,"Light_13","Light_31","Advisory","Advisory",0.43,73.609,73.858,0,87.886,87.954,0,82.402,82.414,0,0,0
+03_Cockpit,,"Light_16","Light_25","Advisory","Normal Status",0.162,53.123,51.64,0,45.85,46.618,0,45.74,46.657,0,0,0
+03_Cockpit,,"Light_04","Light_25","Normal Status","Normal Status",0.351,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_17","Light_25","Advisory","Normal Status",0.297,53.123,51.64,0,45.85,46.618,0,45.74,46.657,0,0,0
+03_Cockpit,,"Light_25","Light_32","Normal Status","Advisory",0.467,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_24","Light_25","Caution","Normal Status",0.075,52.633,42.693,0,84.773,77.322,0,80.889,74.344,0,0,0
+03_Cockpit,,"Light_05","Light_25","Normal Status","Normal Status",0.343,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_15","Light_25","Caution","Normal Status",0.143,52.633,42.693,0,84.773,77.322,0,80.889,74.344,0,0,0
+03_Cockpit,,"Light_25","Light_34","Normal Status","Advisory",0.162,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_25","Light_26","Normal Status","Normal Status",0.075,51.552,47.645,0,85.282,80.702,0,82.207,78.34,0,0,0
+03_Cockpit,,"Light_04","Light_11","Normal Status","Advisory",0.467,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_11","Light_32","Advisory","Advisory",0.351,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_11","Light_24","Advisory","Caution",0.467,69.864,69.053,0,84.742,83.996,0,79.641,79.059,0,0,0
+03_Cockpit,,"Light_02","Light_11","Normal Status","Advisory",0.162,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_11","Light_31","Advisory","Advisory",0.343,73.609,73.858,0,87.886,87.954,0,82.402,82.414,0,0,0
+03_Cockpit,,"Light_04","Light_16","Normal Status","Advisory",0.297,53.123,51.64,0,45.85,46.618,0,45.74,46.657,0,0,0
+03_Cockpit,,"Light_16","Light_17","Advisory","Advisory",0.075,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_16","Light_24","Advisory","Caution",0.297,47.254,48.313,0,70.812,68.003,0,69.009,66.012,0,0,0
+03_Cockpit,,"Light_05","Light_16","Normal Status","Advisory",0.162,53.123,51.64,0,45.85,46.618,0,45.74,46.657,0,0,0
+03_Cockpit,,"Light_15","Light_16","Caution","Advisory",0.075,47.254,48.313,0,70.812,68.003,0,69.009,66.012,0,0,0
+03_Cockpit,,"Light_16","Light_34","Advisory","Advisory",0.43,41.774,44.039,0,25.879,25.815,0,25.9,25.735,0,0,0
+03_Cockpit,,"Light_16","Light_26","Advisory","Normal Status",0.143,42.16,40.217,0,68.825,65.966,0,67.352,64.288,0,0,0
+03_Cockpit,,"Light_04","Light_17","Normal Status","Advisory",0.467,53.123,51.64,0,45.85,46.618,0,45.74,46.657,0,0,0
+03_Cockpit,,"Light_04","Light_24","Normal Status","Caution",0.343,52.633,42.693,0,84.773,77.322,0,80.889,74.344,0,0,0
+03_Cockpit,,"Light_04","Light_05","Normal Status","Normal Status",0.075,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_02","Light_04","Normal Status","Normal Status",0.26,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_04","Light_15","Normal Status","Caution",0.162,52.633,42.693,0,84.773,77.322,0,80.889,74.344,0,0,0
+03_Cockpit,,"Light_04","Light_34","Normal Status","Advisory",0.543,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_04","Light_26","Normal Status","Normal Status",0.43,51.552,47.645,0,85.282,80.702,0,82.207,78.34,0,0,0
+03_Cockpit,,"Light_17","Light_24","Advisory","Caution",0.467,47.254,48.313,0,70.812,68.003,0,69.009,66.012,0,0,0
+03_Cockpit,,"Light_05","Light_17","Normal Status","Advisory",0.297,53.123,51.64,0,45.85,46.618,0,45.74,46.657,0,0,0
+03_Cockpit,,"Light_15","Light_17","Caution","Advisory",0.26,47.254,48.313,0,70.812,68.003,0,69.009,66.012,0,0,0
+03_Cockpit,,"Light_17","Light_26","Advisory","Normal Status",0.162,42.16,40.217,0,68.825,65.966,0,67.352,64.288,0,0,0
+03_Cockpit,,"Light_24","Light_32","Caution","Advisory",0.297,69.864,69.053,0,84.742,83.996,0,79.641,79.059,0,0,0
+03_Cockpit,,"Light_02","Light_32","Normal Status","Advisory",0.543,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_32","Light_34","Advisory","Advisory",0.26,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_31","Light_32","Advisory","Advisory",0.075,73.609,73.858,0,87.886,87.954,0,82.402,82.414,0,0,0
+03_Cockpit,,"Light_05","Light_24","Normal Status","Caution",0.351,52.633,42.693,0,84.773,77.322,0,80.889,74.344,0,0,0
+03_Cockpit,,"Light_02","Light_24","Normal Status","Caution",0.43,52.633,42.693,0,84.773,77.322,0,80.889,74.344,0,0,0
+03_Cockpit,,"Light_15","Light_24","Caution","Caution",0.162,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_24","Light_34","Caution","Advisory",0.143,69.864,69.053,0,84.742,83.996,0,79.641,79.059,0,0,0
+03_Cockpit,,"Light_24","Light_26","Caution","Normal Status",0.26,15.39,10.407,1,11.891,7.162,1,9.848,6.122,0,1,1
+03_Cockpit,,"Light_24","Light_31","Caution","Advisory",0.467,16.469,17.186,0,11.088,11.218,1,9.403,9.561,0,0,1
+03_Cockpit,,"Light_02","Light_05","Normal Status","Normal Status",0.445,0,0,0,0,0,0,0,0,0,0,0
+03_Cockpit,,"Light_05","Light_15","Normal Status","Caution",0.143,52.633,42.693,0,84.773,77.322,0,80.889,74.344,0,0,0
+03_Cockpit,,"Light_05","Light_34","Normal Status","Advisory",0.548,31.886,25.996,0,29.207,22.095,0,29.241,22.182,0,0,0
+03_Cockpit,,"Light_05","Light_26","Normal Status","Normal Status",0.351,51.552,47.645,0,85.282,80.702,0,82.207,78.34,0,0,0
+03_Cockpit,,"Light_02","Light_15","Normal Status","Caution",0.467,52.633,42.693,0,84.773,77.322,0,80.889,74.344,0,0,0
+03_Cockpit,,"Light_02","Light_31","Normal Status","Advisory",0.548,55.059,50.166,0,86.287,81.359,0,83.125,78.869,0,0,0
+03_Cockpit,,"Light_15","Light_34","Caution","Advisory",0.351,69.864,69.053,0,84.742,83.996,0,79.641,79.059,0,0,0
+03_Cockpit,,"Light_15","Light_26","Caution","Normal Status",0.162,15.39,10.407,1,11.891,7.162,1,9.848,6.122,0,1,1
+03_Cockpit,,"Light_26","Light_34","Normal Status","Advisory",0.297,74.734,74.741,0,88.948,88.979,0,82.971,82.99,0,0,0
+03_Cockpit,,"Light_31","Light_34","Advisory","Advisory",0.445,73.609,73.858,0,87.886,87.954,0,82.402,82.414,0,0,0
