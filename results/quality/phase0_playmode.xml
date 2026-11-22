@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="3" result="Passed" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-22 03:21:15Z" end-time="2026-11-22 03:21:17Z" duration="1.7765603">
+  <test-suite type="TestSuite" id="1019" name="SemanticVR" fullname="SemanticVR" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-11-22 03:21:15Z" end-time="2026-11-22 03:21:17Z" duration="1.776560" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1013" name="SemanticVR.Tests.Runtime.dll" fullname="/Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/ScriptAssemblies/SemanticVR.Tests.Runtime.dll" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-11-22 03:21:15Z" end-time="2026-11-22 03:21:17Z" duration="1.769342" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="63540" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1014" name="SemanticVR" fullname="SemanticVR" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-11-22 03:21:15Z" end-time="2026-11-22 03:21:17Z" duration="1.768642" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1015" name="Tests" fullname="SemanticVR.Tests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-11-22 03:21:15Z" end-time="2026-11-22 03:21:17Z" duration="1.768056" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1009" name="Phase0DemoTests" fullname="SemanticVR.Tests.Phase0DemoTests" classname="SemanticVR.Tests.Phase0DemoTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-22 03:21:15Z" end-time="2026-11-22 03:21:17Z" duration="1.766850" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1012" name="FrameTime_Report" fullname="SemanticVR.Tests.Phase0DemoTests.FrameTime_Report" methodname="FrameTime_Report" classname="SemanticVR.Tests.Phase0DemoTests" runstate="Runnable" seed="1895929184" result="Passed" start-time="2026-11-22 03:21:15Z" end-time="2026-11-22 03:21:15Z" duration="0.328028" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[Phase0] avg frame time (batch, simulated stereo): 0.20 ms (4934 fps), 640x480
+]]></output>
+            </test-case>
+            <test-case id="1011" name="OffAxisProjection_IsAsymmetric_AndMirrored" fullname="SemanticVR.Tests.Phase0DemoTests.OffAxisProjection_IsAsymmetric_AndMirrored" methodname="OffAxisProjection_IsAsymmetric_AndMirrored" classname="SemanticVR.Tests.Phase0DemoTests" runstate="Runnable" seed="733106532" result="Passed" start-time="2026-11-22 03:21:15Z" end-time="2026-11-22 03:21:15Z" duration="0.263079" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1010" name="Scene_LoadsWithTwoEyeCameras_AndRendersAllModes" fullname="SemanticVR.Tests.Phase0DemoTests.Scene_LoadsWithTwoEyeCameras_AndRendersAllModes" methodname="Scene_LoadsWithTwoEyeCameras_AndRendersAllModes" classname="SemanticVR.Tests.Phase0DemoTests" runstate="Runnable" seed="1799509133" result="Passed" start-time="2026-11-22 03:21:15Z" end-time="2026-11-22 03:21:17Z" duration="1.163555" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: /Users/nayana/Library/Application Support/DefaultCompany/SemanticVR/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

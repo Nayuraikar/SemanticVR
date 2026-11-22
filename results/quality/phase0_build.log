@@ -1,0 +1,519 @@
+Unity Editor version:    6000.3.28f1 (8f082d2fe476)
+Branch:                  6000.3/respin/6000.3.28f1-21f78c3e21d1
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 26.6.2 (Build 25G83)
+Darwin version:          25.6.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        8192 MB
+Date:                    2026-11-22T03:21:42Z
+VBCSCompilerServerWatchdog: watching VBCSCompiler (PID 63602)
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Channel LicenseClient-nayana doesn't exist
+Launching external process: /Applications/Unity/Hub/Editor/6000.3.28f1/Unity.app/Contents/Helpers/UnityLicensingClient.app/Contents/MacOS/Unity.Licensing.Client
+[Licensing::Module] Successfully launched the LicensingClient (PId: 63604)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-nayana" at "2026-11-22T03:21:43.020872Z"
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.19.0+4cc3dda
+  Session Id:              7927e76867ca49f4b27f685d0ef0efce
+  Correlation Id:          8cf591f8ed8a257c9e9cf00d41859c56
+  External correlation Id: 7704812766807047716
+  Machine Id:              v4074vaaIIrcY+Fn5XQ6g0i2eU8=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-nayana" (connect: 0.17s, validation: 0.00s, handshake: 0.16s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-nayana-notifications" at "2026-11-22T03:21:43.184692Z"
+[Licensing::Module] Connected to LicensingClient (PId: 63604, launch time: 0.00, total connection time: 0.34s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 13470004531973-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.00
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 0.34s
+Launching external process: /Applications/Unity/Hub/Editor/6000.3.28f1/Unity.app/Contents/Resources/PackageManager/Server/UnityPackageManager
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/6000.3.28f1/Unity.app/Contents/MacOS/Unity
+-batchmode
+-quit
+-projectPath
+unity/SemanticVR
+-executeMethod
+SemanticVR.Editor.Phase0SceneBuilder.Build
+-logFile
+results/quality/phase0_build.log
+Successfully changed project path to: /Users/nayana/dev/SemanticVR/unity/SemanticVR
+/Users/nayana/dev/SemanticVR/unity/SemanticVR
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-remapper-allocator-initial-capacity=32768"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [8523800960]  Target information:
+
+Player connection [8523800960]  * "[IP] 192.168.31.224 [Port] 55504 [Flags] 2 [Guid] 2403877254 [EditorId] 2403877254 [Version] 1048832 [Id] OSXEditor(0,MacBookAir.lan) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+
+Player connection [8523800960] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [8523800960] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-63601" after 0.3 seconds.
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 0.06 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.3.28f1 (8f082d2fe476)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/6000.3.28f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/nayana/dev/SemanticVR/unity/SemanticVR/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+ preferred device: Apple M1 (high power)
+Metal devices available: 1
+0: Apple M1 (high power)
+Using device Apple M1 (high power)
+Initializing Metal device caps: Apple M1
+Mac GPU Family: 2
+Apple GPU Family: 7
+MSL Version: 3.0
+Has Float MSAA: 1
+Has Float Filtering: 1
+ReadWrite Texture Tier: 2
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/6000.3.28f1/Unity.app/Contents/Resources/Scripting/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/6000.3.28f1/Unity.app/Contents/Resources/Scripting/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/6000.3.28f1/Unity.app/Contents/Resources/Scripting/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56601
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/6000.3.28f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+[Licensing::Client] Successfully resolved entitlement details
+Register platform support module: /Applications/Unity/Hub/Editor/6000.3.28f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Registered in 0.002758 seconds.
+- Loaded All Assemblies, in  0.437 seconds
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.392 seconds
+Domain Reload Profiling: 830ms
+	BeginReloadAssembly (146ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (22ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (43ms)
+	LoadAllAssembliesAndSetupDomain (192ms)
+		LoadAssemblies (124ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (189ms)
+			TypeCache.Refresh (187ms)
+				TypeCache.ScanAssembly (169ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (393ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (349ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (49ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (80ms)
+			ProcessInitializeOnLoadAttributes (127ms)
+			ProcessInitializeOnLoadMethodAttributes (88ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 58 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.ai.navigation@2.0.16 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.ai.navigation@d0cf77b009bb)
+    com.unity.collab-proxy@2.14.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.collab-proxy@ac5a9def1e96)
+    com.unity.ide.rider@3.1.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.ide.rider@570989d4a882)
+    com.unity.ide.visualstudio@2.0.26 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.ide.visualstudio@a99d56dec63f)
+    com.unity.inputsystem@1.20.1 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.inputsystem@2436e68c60c4)
+    com.unity.timeline@1.8.13 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.timeline@3a22918286f5)
+    com.unity.visualscripting@1.9.12 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.visualscripting@4edfcc09512f)
+    com.unity.burst@1.8.31 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.burst@bfa84123c21a)
+    com.unity.mathematics@1.3.3 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.mathematics@19a9377c4ffa)
+    com.unity.collections@2.7.1 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.collections@88d5bf65ce66)
+    com.unity.searcher@4.9.5 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.searcher@a463122f2c00)
+    com.unity.nuget.mono-cecil@1.11.6 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.nuget.mono-cecil@ecb9724e46ff)
+    com.unity.test-framework.performance@3.5.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.test-framework.performance@8b56083ec0f0)
+  Built-in packages:
+    com.unity.multiplayer.center@1.0.1 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.multiplayer.center@f01f4ba8d00a)
+    com.unity.render-pipelines.universal@17.3.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.render-pipelines.universal@029be7ffa662)
+    com.unity.test-framework@1.6.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.test-framework@bd7f943e9647)
+    com.unity.ugui@2.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.ugui@44a561608371)
+    com.unity.modules.accessibility@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.physics2d)
+    com.unity.modules.screencapture@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.terrainphysics)
+    com.unity.modules.tilemap@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.tilemap)
+    com.unity.modules.ui@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.video)
+    com.unity.modules.vr@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.vr)
+    com.unity.modules.wind@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.0.5 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.ext.nunit@d8c07649098d)
+    com.unity.render-pipelines.core@17.3.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.render-pipelines.core@3424017a4ec3)
+    com.unity.shadergraph@17.3.0 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.shadergraph@d526115bb944)
+    com.unity.render-pipelines.universal-config@17.0.3 (location: /Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/PackageCache/com.unity.render-pipelines.universal-config@8dc1aab4af1d)
+  Local packages:
+    com.nayuraikar.semanticvr@file:/Users/nayana/dev/SemanticVR/packages/com.nayuraikar.semanticvr (location: /Users/nayana/dev/SemanticVR/packages/com.nayuraikar.semanticvr)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.01 seconds
+[ScriptCompilation] Requested script compilation because: Assembly Definition File(s) changed
+[ScriptCompilation] Requested script compilation because: Assetdatabase observed changes in script compilation related files
+[40m[32minfo[39m[22m[49m: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://unix:/tmp/ilpp.sock-4e4a9456bb3495d4ef98416440179e32
+[40m[32minfo[39m[22m[49m: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+[40m[32minfo[39m[22m[49m: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+[40m[32minfo[39m[22m[49m: Microsoft.Hosting.Lifetime[0]
+      Content root path: /Users/nayana/dev/SemanticVR/unity/SemanticVR/
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc -
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc - - 200 - application/grpc 53.2358ms
+Starting: /Applications/Unity/Hub/Editor/6000.3.28f1/Unity.app/Contents/Resources/BuildPipeline/bee_backend --ipc --defer-dag-verification --dagfile="Library/Bee/200b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: /Users/nayana/dev/SemanticVR/unity/SemanticVR
+DisplayProgressbar: Compiling Scripts
+ExitCode: 4 Duration: 0s169ms
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/200b0aE-inputdata.json
+*** Tundra requires additional run (0.15 seconds), 0 items updated, 444 evaluated
+Starting: /Applications/Unity/Hub/Editor/6000.3.28f1/Unity.app/Contents/Resources/Scripting/netcorerun/netcorerun "/Applications/Unity/Hub/Editor/6000.3.28f1/Unity.app/Contents/Resources/BuildPipeline/ScriptCompilationBuildProgram.exe" "Library/Bee/200b0aE.dag.json" "Library/Bee/200b0aE-inputdata.json" "Library/Bee/buildprogram0.traceevents"
+WorkingDir: /Users/nayana/dev/SemanticVR/unity/SemanticVR
+ExitCode: 0 Duration: 1s379ms
+Starting: /Applications/Unity/Hub/Editor/6000.3.28f1/Unity.app/Contents/Resources/BuildPipeline/bee_backend --ipc --defer-dag-verification --dagfile="Library/Bee/200b0aE.dag" --continue-on-failure --dagfilejson="Library/Bee/200b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: /Users/nayana/dev/SemanticVR/unity/SemanticVR
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors application/grpc -
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+[40m[1m[33mwarn[39m[22m[49m: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.runtime.interopservices.windowsruntime has duplicate hint path. Ignoring "/Applications/Unity/Hub/Editor/6000.3.28f1/Unity.app/Contents/Resources/Scripting/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.InteropServices.WindowsRuntime.dll" in favor of "/Applications/Unity/Hub/Editor/6000.3.28f1/Unity.app/Contents/Resources/Scripting/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
+[40m[1m[33mwarn[39m[22m[49m: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.componentmodel.composition has duplicate hint path. Ignoring "/Applications/Unity/Hub/Editor/6000.3.28f1/Unity.app/Contents/Resources/Scripting/UnityReferenceAssemblies/unity-4.8-api/System.ComponentModel.Composition.dll" in favor of "/Applications/Unity/Hub/Editor/6000.3.28f1/Unity.app/Contents/Resources/Scripting/NetStandard/compat/2.1.0/shims/netfx/System.ComponentModel.Composition.dll"
+[40m[32minfo[39m[22m[49m: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Resolved Unity.Burst.Cecil, Version=0.11.6.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e with Library/PackageCache/com.unity.burst@bfa84123c21a/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll
+[40m[32minfo[39m[22m[49m: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Resolved Mono.Cecil, Version=0.11.5.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e with Library/PackageCache/com.unity.nuget.mono-cecil@ecb9724e46ff/Mono.Cecil.dll
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors application/grpc - - 200 - application/grpc 25.5492ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly application/grpc -
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly application/grpc -
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+[40m[32minfo[39m[22m[49m: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/200b0aE.dag/SemanticVR.Tests.Runtime.dll, with 134 defines and 267 references
+[40m[32minfo[39m[22m[49m: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/200b0aE.dag/SemanticVR.Editor.dll, with 132 defines and 290 references
+[40m[32minfo[39m[22m[49m: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[40m[32minfo[39m[22m[49m: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[40m[32minfo[39m[22m[49m: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+[40m[32minfo[39m[22m[49m: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+[40m[32minfo[39m[22m[49m: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[40m[32minfo[39m[22m[49m: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly application/grpc - - 200 - application/grpc 18.3870ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly application/grpc - - 200 - application/grpc 18.3870ms
+ExitCode: 0 Duration: 1s630ms
+Finished compiling graph: 816 nodes, 15730 flattened edges (13334 ToBuild, 138 ToUse), maximum node priority 916
+[383/813    0s] WriteText Library/Bee/artifacts/200b0aE.dag/SemanticVR.Tests.Runtime.dll.mvfrm.rsp
+[387/813    0s] WriteText Library/Bee/artifacts/200b0aE.dag/SemanticVR.Tests.Runtime.rsp
+[619/813    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[620/813    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.InputSystem.TestFramework.ref.dll_016BA620DA850B5B.mvfrm
+[804/813    0s] MovedFromExtractor-Combine Library/Bee/artifacts/200b0aE.dag/SemanticVR.Tests.Runtime.dll.mvfrm
+[805/813    1s] Csc Library/Bee/artifacts/200b0aE.dag/SemanticVR.Editor.dll (+2 others)
+[806/813    0s] Csc Library/Bee/artifacts/200b0aE.dag/SemanticVR.Tests.Runtime.dll (+2 others)
+[           0s] Csc Library/Bee/artifacts/200b0aE.dag/SemanticVR.Tests.Runtime.dll (+2 others) [CacheWrite 00000000000000000000000000000005]
+[           0s] Csc Library/Bee/artifacts/200b0aE.dag/SemanticVR.Editor.dll (+2 others) [CacheWrite 00000000000000000000000000000005]
+[807/813    0s] ILPostProcess Library/Bee/artifacts/200b0aE.dag/post-processed/SemanticVR.Tests.Runtime.dll (+pdb)
+Processing assembly Library/Bee/artifacts/200b0aE.dag/SemanticVR.Tests.Runtime.dll, with 134 defines and 267 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[808/813    0s] ILPostProcess Library/Bee/artifacts/200b0aE.dag/post-processed/SemanticVR.Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/200b0aE.dag/SemanticVR.Editor.dll, with 132 defines and 290 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[809/813    0s] CopyFiles Library/ScriptAssemblies/SemanticVR.Editor.pdb
+[810/813    0s] CopyFiles Library/ScriptAssemblies/SemanticVR.Editor.dll
+[811/813    0s] CopyFiles Library/ScriptAssemblies/SemanticVR.Tests.Runtime.pdb
+[812/813    0s] CopyFiles Library/ScriptAssemblies/SemanticVR.Tests.Runtime.dll
+*** Tundra build success (1.61 seconds), 13 items updated, 813 evaluated
+AssetDatabase: script compilation time: 3.899332s
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.881 seconds
+Start importing Packages/com.nayuraikar.semanticvr/Tests/Runtime/SemanticVR.Tests.Runtime.asmdef using Guid(b0b7c3ef13f8e40c98bd680192ee6ae4) (AssemblyDefinitionImporter) -> (artifact id: '4fde3ae361464b569134defaddf52e3b') in 0.023726083 seconds
+Refreshing native plugins compatible for Editor in 2.10 ms, found 2 plugins.
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 2 plugins.
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.631 seconds
+Domain Reload Profiling: 3512ms
+	BeginReloadAssembly (260ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (15ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (144ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (23ms)
+	LoadAllAssembliesAndSetupDomain (543ms)
+		LoadAssemblies (321ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (281ms)
+			TypeCache.Refresh (209ms)
+				TypeCache.ScanAssembly (185ms)
+			BuildScriptInfoCaches (57ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (2631ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2360ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (23ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (167ms)
+			ProcessInitializeOnLoadAttributes (2097ms)
+			ProcessInitializeOnLoadMethodAttributes (65ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (3ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (15ms)
+Refreshing native plugins compatible for Editor in 0.98 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=7b0f7bc7ad36c4298b84ddf301b5f717): Total: 9.239 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=3 ms, native=3706 ms
+		Asset DB Callback time: managed=644 ms, native=43 ms
+		Scripting: domain reloads=1, domain reload time=881 ms, compile time=3902 ms, other=56 ms
+		Project Asset Count: scripts=1354, non-scripts=2429
+		Asset File Changes: new=1, changed=3, moved=0, deleted=0
+		Scan Filter Count: 1
+	InvokeCustomDependenciesCallbacks: 0.001ms
+	InvokePackagesCallback: 18.746ms
+	ApplyChangesToAssetFolders: 0.408ms
+	Scan: 657.593ms
+	OnSourceAssetsModified: 0.641ms
+	CategorizeAssetsWithTransientArtifact: 73.060ms
+	ProcessAssetsWithTransientArtifactChanges: 71.704ms
+	CategorizeAssets: 75.017ms
+	ImportOutOfDateAssets: 2674.418ms (-1260.257ms without children)
+		ImportManagerImport: 28.465ms (4.084ms without children)
+			ImportInProcess: 24.361ms
+			UpdateCategorizedAssets: 0.020ms
+		CompileScripts: 3901.930ms
+		ReloadNativeAssets: 0.046ms
+		UnloadImportedAssets: 2.978ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.775ms
+		InitializingProgressBar: 0.000ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
+		OnDemandSchedulerStart: 0.482ms
+	PostProcessAllAssets: 666.610ms
+	Hotreload: 4.137ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
+	UnloadStreamsBegin: 2.143ms
+	PersistCurrentRevisions: 0.259ms
+	UnloadStreamsEnd: 0.001ms
+	GenerateScriptTypeHashes: 2.516ms
+	Untracked: 4994.329ms
+
+Application.AssetDatabase Initial Refresh End
+Launching external process: /Applications/Unity/Hub/Editor/6000.3.28f1/Unity.app/Contents/Helpers/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.09 seconds
+Scanning for USB devices : 0.293ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-SemanticVR
+2026-11-22 08:51:56.332 Unity[63601:542708] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x8f19ed720 SDF, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6696 unused Assets / (4.7 MB). Loaded Objects now: 7545.
+Memory consumption went from 228.9 MB to 224.2 MB.
+Total: 14.801708 ms (FindLiveObjects: 0.688709 ms CreateObjectMapping: 0.348500 ms MarkObjects: 10.107875 ms  DeleteObjects: 3.656250 ms)
+
+2026-11-22 08:51:56.428 Unity[63601:542708] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x8f19efd40 SDF, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1 unused Assets / (2.7 KB). Loaded Objects now: 7545.
+Memory consumption went from 216.2 MB to 216.2 MB.
+Total: 8.278250 ms (FindLiveObjects: 0.213500 ms CreateObjectMapping: 0.172125 ms MarkObjects: 7.874750 ms  DeleteObjects: 0.017583 ms)
+
+Start importing Assets/Scenes/Phase0_Demo/GroundChecker.png using Guid(d88cbbbe4e96f47dc85046e926c703c4) (TextureImporter) -> (artifact id: 'ed6f46be78ee11d3a73eb40dead12698') in 0.011794416 seconds
+Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=362f9a15ec66342f2a58f65e1186315f): Total: 0.078 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Scenes/Phase0_Demo/Pair0_A.mat using Guid(61036d8335b7145238bf0fa0e41a2921) (NativeFormatImporter) -> (artifact id: '266884b8197bdb3d8694354468ec6487') in 0.002369667 seconds
+Start importing Assets/Scenes/Phase0_Demo/GradientSky.mat using Guid(32d9a9de5d3ee41d3a38fbb4e9a89ea8) (NativeFormatImporter) -> (artifact id: '9d17aa921c4391043982c7c9f282fe9e') in 0.001063833 seconds
+Start importing Assets/Scenes/Phase0_Demo/Pair3_A.mat using Guid(d333e78da75a843089364b84d2fe9c84) (NativeFormatImporter) -> (artifact id: 'e432406107fff52f48d4f1b2ee5d4f5b') in 0.002528417 seconds
+Start importing Assets/Scenes/Phase0_Demo/Pair0_B.mat using Guid(04b55e9348c454d5aaea72a0c79d0acc) (NativeFormatImporter) -> (artifact id: '582501f65dc9dfa1817278244baef75d') in 0.001159792 seconds
+Start importing Assets/Scenes/Phase0_Demo/Pair2_B.mat using Guid(546d8e1e018344a99833f0cb4f1f7618) (NativeFormatImporter) -> (artifact id: 'b5f01beb8ec0e5456d464cc71e9b6b56') in 0.002346958 seconds
+Start importing Assets/Scenes/Phase0_Demo/Pedestal.mat using Guid(35e6b34d57709424a91572a849ee0cbe) (NativeFormatImporter) -> (artifact id: '51c53b16321380124b0760c061fda57c') in 0.00121725 seconds
+Start importing Assets/Scenes/Phase0_Demo/Pair2_A.mat using Guid(55c0d4b2c0d8545cbb24bd845db901b6) (NativeFormatImporter) -> (artifact id: 'ed30d614024420dfd137e2b63eefba87') in 0.001288584 seconds
+Start importing Assets/Scenes/Phase0_Demo/Rock.mat using Guid(eacb8b305f06841058d17935f6bba9b6) (NativeFormatImporter) -> (artifact id: 'ae509f815ff15fcb9e25df18558fbb79') in 0.00116725 seconds
+Start importing Assets/Scenes/Phase0_Demo/Ground.mat using Guid(9bed833185fb542a0b3243c95d43ee90) (NativeFormatImporter) -> (artifact id: '2c8b9bc43a11b8e260c964ca6afbb0de') in 0.001057166 seconds
+Start importing Assets/Scenes/Phase0_Demo/CanopyB.mat using Guid(0d949d54418a243be807657d60a08c3b) (NativeFormatImporter) -> (artifact id: '5a2a9d2ae9742a2b0b4af31f0b140eaa') in 0.000996917 seconds
+Start importing Assets/Scenes/Phase0_Demo/CanopyA.mat using Guid(1dbfaf99afd3e4e2ab01eed5a6ca224a) (NativeFormatImporter) -> (artifact id: 'b2e3433fe3e76323232fc1cac908a3f4') in 0.001009125 seconds
+Start importing Assets/Scenes/Phase0_Demo/Pair1_B.mat using Guid(7d11b3e61c0484eb18689d726498694e) (NativeFormatImporter) -> (artifact id: '765c16f03c009d01ed66a5f8a06b46d0') in 0.000838875 seconds
+Start importing Assets/Scenes/Phase0_Demo/Trunk.mat using Guid(cd4f1f6af58d540eeace9b75f5b9528e) (NativeFormatImporter) -> (artifact id: '3135a9355fcb0c5fd0be4bdc5cf1b5ab') in 0.000854666 seconds
+Start importing Assets/Scenes/Phase0_Demo/Pair3_B.mat using Guid(1ef64f43494384ac8bffe865181c140a) (NativeFormatImporter) -> (artifact id: 'abd55a7c0ddc12fec223cc0088d92a79') in 0.000854083 seconds
+Start importing Assets/Scenes/Phase0_Demo/Pair1_A.mat using Guid(fe18df2f863a740e6ab878ea40865ca1) (NativeFormatImporter) -> (artifact id: '1575e75835c6b38df206490c16ba881e') in 0.001043334 seconds
+Start importing Assets/Scenes/Phase0_Demo/Wall.mat using Guid(bf297ed835b1d437fb65099e8537e2c2) (NativeFormatImporter) -> (artifact id: 'c73ea705bb36cc0003ade2560f74f020') in 0.000774625 seconds
+Refreshing native plugins compatible for Editor in 0.90 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=be26dcd0d12414dd2852624cbcc47574): Total: 0.063 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Scenes/Phase0_Demo.unity using Guid(2c3eedd98d723441ba43abee3b3ef928) (DefaultImporter) -> (artifact id: '40d168ad87a0714b20cfc27153c21c8f') in 0.000946667 seconds
+Refreshing native plugins compatible for Editor in 0.83 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=56aa8eaff7abc4422814214e8bcc65eb): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Settings/PC_Renderer.asset using Guid(f288ae1f4751b564a96ac7587541f7a2) (NativeFormatImporter) -> (artifact id: '68f7b17a47f10d03fef3bc06a77b6411') in 0.001804291 seconds
+Start importing Assets/Settings/Mobile_Renderer.asset using Guid(65bc7dbf4170f435aa868c779acfb082) (NativeFormatImporter) -> (artifact id: '617e58527613b53f64905b6a8ef75199') in 0.001286625 seconds
+Refreshing native plugins compatible for Editor in 0.87 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=956ba05699cb7499cb52d01e2c294bf0): Total: 0.020 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=5e6bc6339e02a43f7b821efc8959fb43): Total: 0.119 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+[SemanticVR] Phase 0 demo scene built: Assets/Scenes/Phase0_Demo.unity
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+SemanticVR.Editor.Phase0SceneBuilder:Build () (at /Users/nayana/dev/SemanticVR/packages/com.nayuraikar.semanticvr/Editor/Phase0SceneBuilder.cs:54)
+
+(Filename: /Users/nayana/dev/SemanticVR/packages/com.nayuraikar.semanticvr/Editor/Phase0SceneBuilder.cs Line: 54)
+
+Batchmode quit successfully invoked - shutting down!
+Curl error 42: Callback aborted
+Killing ADB server in 0.230594 seconds.
+Thread 0x17fec7000 may have been prematurely finalized
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+[Licensing::IpcConnector] LicenseClient-nayana-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-nayana channel disconnected successfully.
+Thread 0x16f9e7000 may have been prematurely finalized
+Thread 0x16fa73000 may have been prematurely finalized
+Thread 0x16faff000 may have been prematurely finalized
+Thread 0x16fb8b000 may have been prematurely finalized
+Thread 0x16fd2f000 may have been prematurely finalized
+Thread 0x16fc17000 may have been prematurely finalized
+Thread 0x16fca3000 may have been prematurely finalized
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+[40m[32minfo[39m[22m[49m: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+[40m[32minfo[39m[22m[49m: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      ALC ILPP context 1 is unloading
+debugger-agent: Unable to listen on 44
+Exiting batchmode successfully now!
+[Package Manager] Server process was shutdown
+NativeWindowManager:Windowing System isn't initialized yet.

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="11" result="Passed" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-22 03:23:59Z" end-time="2026-11-22 03:24:02Z" duration="3.0951518">
+  <test-suite type="TestSuite" id="1022" name="SemanticVR" fullname="SemanticVR" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-11-22 03:23:59Z" end-time="2026-11-22 03:24:02Z" duration="3.095152" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1016" name="SemanticVR.Tests.Runtime.dll" fullname="/Users/nayana/dev/SemanticVR/unity/SemanticVR/Library/ScriptAssemblies/SemanticVR.Tests.Runtime.dll" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-11-22 03:23:59Z" end-time="2026-11-22 03:24:02Z" duration="3.088218" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="63800" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1017" name="SemanticVR" fullname="SemanticVR" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-11-22 03:23:59Z" end-time="2026-11-22 03:24:02Z" duration="3.087606" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1018" name="Tests" fullname="SemanticVR.Tests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-11-22 03:23:59Z" end-time="2026-11-22 03:24:02Z" duration="3.087068" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="CSharpParityTests" fullname="SemanticVR.Tests.CSharpParityTests" classname="SemanticVR.Tests.CSharpParityTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-22 03:23:59Z" end-time="2026-11-22 03:23:59Z" duration="0.043097" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1002" name="CvdPipeline_MatchesGolden" fullname="SemanticVR.Tests.CSharpParityTests.CvdPipeline_MatchesGolden" methodname="CvdPipeline_MatchesGolden" classname="SemanticVR.Tests.CSharpParityTests" runstate="Runnable" seed="742768490" result="Passed" start-time="2026-11-22 03:23:59Z" end-time="2026-11-22 03:23:59Z" duration="0.027541" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[CSharpParity/cvd] max abs error per category:
+  simulated_rgb                2.384E-007  (tol 1E-004) OK
+  lab_original                 4.196E-005  (tol 1E-002) OK
+  lab_simulated                4.005E-005  (tol 1E-002) OK
+  de00_orig_vs_sim             6.530E-005  (tol 1E-003) OK
+
+]]></output>
+            </test-case>
+            <test-case id="1004" name="MachadoMatrices_MatchGolden" fullname="SemanticVR.Tests.CSharpParityTests.MachadoMatrices_MatchGolden" methodname="MachadoMatrices_MatchGolden" classname="SemanticVR.Tests.CSharpParityTests" runstate="Runnable" seed="2008442405" result="Passed" start-time="2026-11-22 03:23:59Z" end-time="2026-11-22 03:23:59Z" duration="0.000918" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[CSharpParity/matrix] max abs error per category:
+  machado_matrix               1.192E-007  (tol 1E-004) OK
+
+]]></output>
+            </test-case>
+            <test-case id="1003" name="SharmaPairs_MatchReferenceAndPublished" fullname="SemanticVR.Tests.CSharpParityTests.SharmaPairs_MatchReferenceAndPublished" methodname="SharmaPairs_MatchReferenceAndPublished" classname="SemanticVR.Tests.CSharpParityTests" runstate="Runnable" seed="1040934159" result="Passed" start-time="2026-11-22 03:23:59Z" end-time="2026-11-22 03:23:59Z" duration="0.004334" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[CSharpParity/sharma] max abs error per category:
+  sharma_vs_reference          1.407E-005  (tol 1E-003) OK
+  sharma_vs_published(4dp)     4.947E-005  (tol 1E-003) OK
+
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1005" name="HlslParityTests" fullname="SemanticVR.Tests.HlslParityTests" classname="SemanticVR.Tests.HlslParityTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-22 03:23:59Z" end-time="2026-11-22 03:23:59Z" duration="0.035147" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1006" name="CvdPipeline_MatchesGolden" fullname="SemanticVR.Tests.HlslParityTests.CvdPipeline_MatchesGolden" methodname="CvdPipeline_MatchesGolden" classname="SemanticVR.Tests.HlslParityTests" runstate="Runnable" seed="2135742886" result="Passed" start-time="2026-11-22 03:23:59Z" end-time="2026-11-22 03:23:59Z" duration="0.028955" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Shader warning in 'ComputeParity': pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them at kernel CvdKernel at /Users/nayana/dev/SemanticVR/packages/com.nayuraikar.semanticvr/Shaders/SemanticVRColor.hlsl(87) (on metal)
+Shader warning in 'ComputeParity': use of potentially uninitialized variable (SVR_HueDeg) at kernel CvdKernel at /Users/nayana/dev/SemanticVR/packages/com.nayuraikar.semanticvr/Shaders/SemanticVRColor.hlsl(131) (on metal)
+[HlslParity/cvd (Metal)] max abs error per category:
+  simulated_rgb                2.384E-007  (tol 1E-004) OK
+  lab_original                 7.248E-005  (tol 1E-002) OK
+  lab_simulated                6.676E-005  (tol 1E-002) OK
+  de00_orig_vs_sim             8.774E-005  (tol 1E-003) OK  worst: #249  rgb=(0.785190642,0.703522861,0.619235635) tritan sev=0.800101459 gpu=5.62222433 ref=5.62231207 labSim=(87.6625,5.16704,4.01182) gpuLabSim=(87.6625,5.16701,4.01182)
+
+]]></output>
+            </test-case>
+            <test-case id="1008" name="MachadoMatrices_MatchGolden" fullname="SemanticVR.Tests.HlslParityTests.MachadoMatrices_MatchGolden" methodname="MachadoMatrices_MatchGolden" classname="SemanticVR.Tests.HlslParityTests" runstate="Runnable" seed="2125634129" result="Passed" start-time="2026-11-22 03:23:59Z" end-time="2026-11-22 03:23:59Z" duration="0.002569" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[HlslParity/matrix] max abs error per category:
+  machado_matrix               1.192E-007  (tol 1E-004) OK
+
+]]></output>
+            </test-case>
+            <test-case id="1007" name="SharmaPairs_MatchGolden" fullname="SemanticVR.Tests.HlslParityTests.SharmaPairs_MatchGolden" methodname="SharmaPairs_MatchGolden" classname="SemanticVR.Tests.HlslParityTests" runstate="Runnable" seed="598271004" result="Passed" start-time="2026-11-22 03:23:59Z" end-time="2026-11-22 03:23:59Z" duration="0.002048" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Shader warning in 'ComputeParity': pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them at kernel CvdKernel at /Users/nayana/dev/SemanticVR/packages/com.nayuraikar.semanticvr/Shaders/SemanticVRColor.hlsl(87) (on metal)
+Shader warning in 'ComputeParity': use of potentially uninitialized variable (SVR_HueDeg) at kernel CvdKernel at /Users/nayana/dev/SemanticVR/packages/com.nayuraikar.semanticvr/Shaders/SemanticVRColor.hlsl(131) (on metal)
+Shader warning in 'ComputeParity': use of potentially uninitialized variable (SVR_HueDeg) at kernel DeltaEKernel at /Users/nayana/dev/SemanticVR/packages/com.nayuraikar.semanticvr/Shaders/SemanticVRColor.hlsl(131) (on metal)
+[HlslParity/sharma] max abs error per category:
+  sharma_vs_reference          2.199E-005  (tol 1E-003) OK  worst: pair 4 gpu=1.00002193 ref=0.99999994
+  sharma_vs_published(4dp)     5.054E-005  (tol 1E-003) OK
+
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1009" name="Phase0DemoTests" fullname="SemanticVR.Tests.Phase0DemoTests" classname="SemanticVR.Tests.Phase0DemoTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-22 03:23:59Z" end-time="2026-11-22 03:24:01Z" duration="1.668776" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1012" name="FrameTime_Report" fullname="SemanticVR.Tests.Phase0DemoTests.FrameTime_Report" methodname="FrameTime_Report" classname="SemanticVR.Tests.Phase0DemoTests" runstate="Runnable" seed="497299245" result="Passed" start-time="2026-11-22 03:23:59Z" end-time="2026-11-22 03:24:00Z" duration="0.325486" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[Phase0] avg frame time (batch, simulated stereo): 0.20 ms (5003 fps), 640x480
+]]></output>
+            </test-case>
+            <test-case id="1011" name="OffAxisProjection_IsAsymmetric_AndMirrored" fullname="SemanticVR.Tests.Phase0DemoTests.OffAxisProjection_IsAsymmetric_AndMirrored" methodname="OffAxisProjection_IsAsymmetric_AndMirrored" classname="SemanticVR.Tests.Phase0DemoTests" runstate="Runnable" seed="387579534" result="Passed" start-time="2026-11-22 03:24:00Z" end-time="2026-11-22 03:24:00Z" duration="0.254888" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1010" name="Scene_LoadsWithTwoEyeCameras_AndRendersAllModes" fullname="SemanticVR.Tests.Phase0DemoTests.Scene_LoadsWithTwoEyeCameras_AndRendersAllModes" methodname="Scene_LoadsWithTwoEyeCameras_AndRendersAllModes" classname="SemanticVR.Tests.Phase0DemoTests" runstate="Runnable" seed="1558465609" result="Passed" start-time="2026-11-22 03:24:00Z" end-time="2026-11-22 03:24:01Z" duration="1.086811" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1013" name="Phase0InputTests" fullname="SemanticVR.Tests.Phase0InputTests" classname="SemanticVR.Tests.Phase0InputTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-11-22 03:24:01Z" end-time="2026-11-22 03:24:02Z" duration="1.338457" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1014" name="Hotkeys_ChangeModeTypeSeverityAndStereo" fullname="SemanticVR.Tests.Phase0InputTests.Hotkeys_ChangeModeTypeSeverityAndStereo" methodname="Hotkeys_ChangeModeTypeSeverityAndStereo" classname="SemanticVR.Tests.Phase0InputTests" runstate="Runnable" seed="2007078220" result="Passed" start-time="2026-11-22 03:24:01Z" end-time="2026-11-22 03:24:01Z" duration="0.330258" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1015" name="WasdAndArrows_MoveTheRig" fullname="SemanticVR.Tests.Phase0InputTests.WasdAndArrows_MoveTheRig" methodname="WasdAndArrows_MoveTheRig" classname="SemanticVR.Tests.Phase0InputTests" runstate="Runnable" seed="34386943" result="Passed" start-time="2026-11-22 03:24:01Z" end-time="2026-11-22 03:24:02Z" duration="1.005851" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: /Users/nayana/Library/Application Support/DefaultCompany/SemanticVR/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

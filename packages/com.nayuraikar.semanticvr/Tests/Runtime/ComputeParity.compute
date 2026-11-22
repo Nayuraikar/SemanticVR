@@ -1,0 +1,58 @@
+// GPU side of HlslParityTests: runs the SemanticVRColor.hlsl functions on golden inputs.
+#pragma kernel CvdKernel
+#pragma kernel DeltaEKernel
+#pragma kernel MatrixKernel
+
+#include "Packages/com.nayuraikar.semanticvr/Shaders/SemanticVRColor.hlsl"
+
+uint _Count;
+
+// CvdKernel: in = (r,g,b,severity), type = cvd index
+StructuredBuffer<float4> _CvdIn;
+StructuredBuffer<int>    _CvdType;
+RWStructuredBuffer<float4> _OutSim;   // simulated rgb
+RWStructuredBuffer<float4> _OutLab0;  // Lab(original)
+RWStructuredBuffer<float4> _OutLab1;  // Lab(simulated)
+RWStructuredBuffer<float>  _OutDe;    // dE00(original, simulated)
+
+[numthreads(64, 1, 1)]
+void CvdKernel(uint3 id : SV_DispatchThreadID)
+{
+    if (id.x >= _Count) return;
+    float4 inp = _CvdIn[id.x];
+    float3 sim = SVR_SimulateCvd(inp.xyz, _CvdType[id.x], inp.w);
+    float3 lab0 = SVR_RgbLinToLab(inp.xyz);
+    float3 lab1 = SVR_RgbLinToLab(sim);
+    _OutSim[id.x] = float4(sim, 0);
+    _OutLab0[id.x] = float4(lab0, 0);
+    _OutLab1[id.x] = float4(lab1, 0);
+    _OutDe[id.x] = SVR_Ciede2000(lab0, lab1);
+}
+
+// DeltaEKernel: pairs of Lab values (Sharma)
+StructuredBuffer<float4> _LabA;
+StructuredBuffer<float4> _LabB;
+RWStructuredBuffer<float> _OutDeLab;
+
+[numthreads(64, 1, 1)]
+void DeltaEKernel(uint3 id : SV_DispatchThreadID)
+{
+    if (id.x >= _Count) return;
+    _OutDeLab[id.x] = SVR_Ciede2000(_LabA[id.x].xyz, _LabB[id.x].xyz);
+}
+
+// MatrixKernel: in = (severity, type, 0, 0); out = 3 rows per case
+StructuredBuffer<float4> _MatIn;
+RWStructuredBuffer<float4> _OutRows;
+
+[numthreads(64, 1, 1)]
+void MatrixKernel(uint3 id : SV_DispatchThreadID)
+{
+    if (id.x >= _Count) return;
+    float4 inp = _MatIn[id.x];
+    float3 r0, r1, r2;
+    SVR_MachadoRows((int)inp.y, inp.x, r0, r1, r2);
+    _OutRows[id.x * 3 + 0] = float4(r0, 0);
+    _OutRows[id.x * 3 + 1] = float4(r1, 0);
+    _OutRows[id.x * 3 + 2] = float4(r2, 0);
+}
